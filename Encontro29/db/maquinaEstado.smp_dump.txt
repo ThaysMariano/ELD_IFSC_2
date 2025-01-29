@@ -1,7 +1,13 @@
 
-State Machine - |maquinaEstado|pr_state
-Name pr_state.D pr_state.C pr_state.B pr_state.A 
-pr_state.A 0 0 0 0 
-pr_state.B 0 0 1 1 
-pr_state.C 0 1 0 1 
-pr_state.D 1 0 0 1 
+State Machine - |maquinaRefri|pr_state
+Name pr_state.ST45 pr_state.ST40 pr_state.ST35 pr_state.ST30 pr_state.ST25 pr_state.ST20 pr_state.ST15 pr_state.ST10 pr_state.ST5 pr_state.ST0 
+pr_state.ST0 0 0 0 0 0 0 0 0 0 0 
+pr_state.ST5 0 0 0 0 0 0 0 0 1 1 
+pr_state.ST10 0 0 0 0 0 0 0 1 0 1 
+pr_state.ST15 0 0 0 0 0 0 1 0 0 1 
+pr_state.ST20 0 0 0 0 0 1 0 0 0 1 
+pr_state.ST25 0 0 0 0 1 0 0 0 0 1 
+pr_state.ST30 0 0 0 1 0 0 0 0 0 1 
+pr_state.ST35 0 0 1 0 0 0 0 0 0 1 
+pr_state.ST40 0 1 0 0 0 0 0 0 0 1 
+pr_state.ST45 1 0 0 0 0 0 0 0 0 1 

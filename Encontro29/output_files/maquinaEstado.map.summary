@@ -1,17 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Jan 28 15:12:38 2025
-Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Standard Edition
+Analysis & Synthesis Status : Successful - Wed Jan 29 17:57:44 2025
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : maquinaEstado
-Top-level Entity Name : maquinaEstado
-Family : Cyclone V
-Logic utilization (in ALMs) : N/A
-Total registers : 3
-Total pins : 5
+Top-level Entity Name : maquinaRefri
+Family : Cyclone IV E
+Total logic elements : 15
+    Total combinational functions : 15
+    Dedicated logic registers : 7
+Total registers : 7
+Total pins : 12
 Total virtual pins : 0
-Total block memory bits : 0
-Total DSP Blocks : 0
-Total HSSI RX PCSs : 0
-Total HSSI PMA RX Deserializers : 0
-Total HSSI TX PCSs : 0
-Total HSSI PMA TX Serializers : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
-Total DLLs : 0

@@ -1,0 +1,14 @@
+-- Cópia Máquina de Estado e anotações 
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+entity copiaMaquinaEstados is
+port (
+	clk, rst : in std_logic;
+	x : in integer range 0 to 2; -- 2 bits pois o exemplo vai até 2 apenas
+	y : out std_logic -- 1 bit pois so vai ate 1 no exemplo
+	);
+end entity;
+
+  

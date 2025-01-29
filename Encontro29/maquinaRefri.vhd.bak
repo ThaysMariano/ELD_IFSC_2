@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity of maquinaRefri is
+port(
+	clr, rst : in std_logic;
+	x : in integer range 0 to 9;
+	y, produtos : out integer range 0 to 9
+
+);
+end entity;
+
+architecture arc_maquinaRefri of maquinaRefri is
+	type state is (ST0, ST5, ST10, ST15, ST20, ST25, ST30, ST35, ST40, ST45, LIXO);
+	signal pr_state, nx_state : state;
+	
+begin 
+
+	
