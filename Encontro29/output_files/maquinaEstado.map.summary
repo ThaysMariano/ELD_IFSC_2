@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Jan 30 14:21:22 2025
-Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Thu Jan 30 16:15:36 2025
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 Revision Name : maquinaEstado
 Top-level Entity Name : maquinaRefri
 Family : Cyclone IV E
-Total logic elements : 26
-    Total combinational functions : 26
+Total logic elements : 30
+    Total combinational functions : 30
     Dedicated logic registers : 10
 Total registers : 10
 Total pins : 13

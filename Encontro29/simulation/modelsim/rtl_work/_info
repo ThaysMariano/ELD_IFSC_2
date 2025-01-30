@@ -9,44 +9,44 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/aluno/ELD_IFSC_2/Encontro29/simulation/modelsim
-Emaquinaestado
-Z1 w1738087029
+Emaquinarefri
+Z1 w1738264530
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 0
+!i122 14
 R0
-Z4 8/home/aluno/ELD_IFSC_2/Encontro29/maquinaEstado.vhd
-Z5 F/home/aluno/ELD_IFSC_2/Encontro29/maquinaEstado.vhd
+Z4 8../../maquinaRefri.vhd
+Z5 F../../maquinaRefri.vhd
 l0
 L4 1
-VQk<>214E>[f9;7<0MJ0OF0
-!s100 KmoDEojkbB661YzXh56U33
+VOmLRN]@a_X@o0P_fkXcFz1
+!s100 4bYBGmCN`4S0JW3zeZXak0
 Z6 OV;C;2020.1;71
 31
-!s110 1738087054
+Z7 !s110 1738266217
 !i10b 1
-Z7 !s108 1738087054.000000
-Z8 !s90 -reportprogress|300|-93|-work|work|/home/aluno/ELD_IFSC_2/Encontro29/maquinaEstado.vhd|
-!s107 /home/aluno/ELD_IFSC_2/Encontro29/maquinaEstado.vhd|
+Z8 !s108 1738266217.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|../../maquinaRefri.vhd|
+!s107 ../../maquinaRefri.vhd|
 !i113 1
-Z9 o-93 -work work
-Z10 tExplicit 1 CvgOpt 0
-Aarch_maqest
+Z10 o-93 -work work
+Z11 tExplicit 1 CvgOpt 0
+Aarc_maquinarefri
 R2
 R3
-DEx4 work 13 maquinaestado 0 22 Qk<>214E>[f9;7<0MJ0OF0
-!i122 0
-l17
-L11 66
-VdD1MS1f4;kcMb<b9L=Rl`0
-!s100 Y<_34HfSUGDolND_=g>7B0
+Z12 DEx4 work 12 maquinarefri 0 22 OmLRN]@a_X@o0P_fkXcFz1
+!i122 14
+l18
+Z13 L14 119
+Z14 V2F;=5?Hm5Q3fZ]7KK;@DR1
+Z15 !s100 E`DgCK<4d<CU]]fHSld6a2
 R6
 31
-!s110 1738087055
-!i10b 1
 R7
+!i10b 1
 R8
-Z11 !s107 /home/aluno/ELD_IFSC_2/Encontro29/maquinaEstado.vhd|
-!i113 1
 R9
+Z16 !s107 ../../maquinaRefri.vhd|
+!i113 1
 R10
+R11

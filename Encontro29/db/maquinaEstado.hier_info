@@ -16,11 +16,11 @@ x[3] => Equal2.IN1
 x[4] => Equal0.IN2
 x[4] => Equal1.IN2
 x[4] => Equal2.IN0
-dev5[0] <= dev5.DB_MAX_OUTPUT_PORT_TYPE
+dev5[0] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
 dev5[1] <= <GND>
-dev10[0] <= dev10.DB_MAX_OUTPUT_PORT_TYPE
+dev10[0] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
 dev10[1] <= <GND>
-prod[0] << prod[0].DB_MAX_OUTPUT_PORT_TYPE
-prod[1] << <GND>
+prod[0] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+prod[1] <= <GND>
 
 
