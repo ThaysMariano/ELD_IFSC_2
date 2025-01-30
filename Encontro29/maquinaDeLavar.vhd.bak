@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity maquinaDeLavar is
+port(
+	clk, rst : in std_logic;
+	tempo : in integer 0 to 1210;
+	start, rapido, nivelCheio, nivelVazio : in std_logic;
+	M1, M2, bomba, valvula, zeraTempo : out std_logic
+);
+
+end entity;
+
+architecture arc_maquinaLavar of maquinaRefri is
+	type state is (ST0, ST5, ST10, ST15, ST20, ST25, ST30, ST35, ST40, ST45);
+	signal pr_state, nx_state : state;
+	
+begin 
