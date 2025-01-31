@@ -4,35 +4,23 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "dev5[0]",
+					"name" : "M1",
 					"strict" : false
 				},
 				{
-					"name" : "dev10[0]",
+					"name" : "M2",
 					"strict" : false
 				},
 				{
-					"name" : "prod[0]",
+					"name" : "bomba",
 					"strict" : false
 				},
 				{
-					"name" : "x[4]",
+					"name" : "valvula",
 					"strict" : false
 				},
 				{
-					"name" : "x[3]",
-					"strict" : false
-				},
-				{
-					"name" : "x[0]",
-					"strict" : false
-				},
-				{
-					"name" : "x[2]",
-					"strict" : false
-				},
-				{
-					"name" : "x[1]",
+					"name" : "ZT",
 					"strict" : false
 				},
 				{
@@ -41,6 +29,22 @@
 				},
 				{
 					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "nivelCheio",
+					"strict" : false
+				},
+				{
+					"name" : "nivelVazio",
+					"strict" : false
+				},
+				{
+					"name" : "rapido",
+					"strict" : false
+				},
+				{
+					"name" : "start",
 					"strict" : false
 				}
 			]

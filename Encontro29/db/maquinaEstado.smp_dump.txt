@@ -1,13 +1,16 @@
 
-State Machine - |maquinaRefri|pr_state
-Name pr_state.ST45 pr_state.ST40 pr_state.ST35 pr_state.ST30 pr_state.ST25 pr_state.ST20 pr_state.ST15 pr_state.ST10 pr_state.ST5 pr_state.ST0 
-pr_state.ST0 0 0 0 0 0 0 0 0 0 0 
-pr_state.ST5 0 0 0 0 0 0 0 0 1 1 
-pr_state.ST10 0 0 0 0 0 0 0 1 0 1 
-pr_state.ST15 0 0 0 0 0 0 1 0 0 1 
-pr_state.ST20 0 0 0 0 0 1 0 0 0 1 
-pr_state.ST25 0 0 0 0 1 0 0 0 0 1 
-pr_state.ST30 0 0 0 1 0 0 0 0 0 1 
-pr_state.ST35 0 0 1 0 0 0 0 0 0 1 
-pr_state.ST40 0 1 0 0 0 0 0 0 0 1 
-pr_state.ST45 1 0 0 0 0 0 0 0 0 1 
+State Machine - |maquinaDeLavar|pr_state
+Name pr_state.Centrifugando pr_state.Esvaziando2 pr_state.Enxague pr_state.Enchendo2 pr_state.Esvaziando1 pr_state.Batendo2 pr_state.ZT3 pr_state.Molho pr_state.ZT2 pr_state.Batento1 pr_state.ZT1 pr_state.Enchendo1 pr_state.Parado 
+pr_state.Parado 0 0 0 0 0 0 0 0 0 0 0 0 0 
+pr_state.Enchendo1 0 0 0 0 0 0 0 0 0 0 0 1 1 
+pr_state.ZT1 0 0 0 0 0 0 0 0 0 0 1 0 1 
+pr_state.Batento1 0 0 0 0 0 0 0 0 0 1 0 0 1 
+pr_state.ZT2 0 0 0 0 0 0 0 0 1 0 0 0 1 
+pr_state.Molho 0 0 0 0 0 0 0 1 0 0 0 0 1 
+pr_state.ZT3 0 0 0 0 0 0 1 0 0 0 0 0 1 
+pr_state.Batendo2 0 0 0 0 0 1 0 0 0 0 0 0 1 
+pr_state.Esvaziando1 0 0 0 0 1 0 0 0 0 0 0 0 1 
+pr_state.Enchendo2 0 0 0 1 0 0 0 0 0 0 0 0 1 
+pr_state.Enxague 0 0 1 0 0 0 0 0 0 0 0 0 1 
+pr_state.Esvaziando2 0 1 0 0 0 0 0 0 0 0 0 0 1 
+pr_state.Centrifugando 1 0 0 0 0 0 0 0 0 0 0 0 1 

@@ -1,3 +1,4 @@
+# Reading pref.tcl
 # do maquinaEstado_run_msim_rtl_vhdl.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -6,449 +7,625 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
 # 
-# vcom -93 -work work {/home/aluno/ELD_IFSC_2/Encontro29/maquinaRefri.vhd}
+# vcom -93 -work work {C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro29/maquinaDeLavar.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:20:09 on Jan 30,2025
-# vcom -reportprogress 300 -93 -work work /home/aluno/ELD_IFSC_2/Encontro29/maquinaRefri.vhd 
+# Start time: 15:55:15 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro29/maquinaDeLavar.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity maquinaRefri
-# -- Compiling architecture arc_maquinaRefri of maquinaRefri
-# End time: 16:20:09 on Jan 30,2025, Elapsed time: 0:00:00
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 15:55:15 on Jan 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# 
-# stdin: <EOF>
-vsim work.maquinarefri(arc_maquinarefri)
-# vsim work.maquinarefri(arc_maquinarefri) 
-# Start time: 16:20:33 on Jan 30,2025
-# //  ModelSim - Intel FPGA Edition 2020.1 Feb 28 2020 Linux 6.1.0-30-amd64
-# //
-# //  Copyright 1991-2020 Mentor Graphics Corporation
-# //  All Rights Reserved.
-# //
-# //  ModelSim - Intel FPGA Edition and its associated documentation contain trade
-# //  secrets and commercial or financial information that are the property of
-# //  Mentor Graphics Corporation and are privileged, confidential,
-# //  and exempt from disclosure under the Freedom of Information Act,
-# //  5 U.S.C. Section 552. Furthermore, this information
-# //  is prohibited from disclosure under the Trade Secrets Act,
-# //  18 U.S.C. Section 1905.
-# //
+vsim work.maquinadelavar
+# vsim work.maquinadelavar 
+# Start time: 15:55:24 on Jan 31,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.maquinarefri(arc_maquinarefri)
-add wave -position end  sim:/maquinarefri/clk
-add wave -position end  sim:/maquinarefri/rst
-add wave -position end  sim:/maquinarefri/x
-add wave -position end  sim:/maquinarefri/dev5
-add wave -position end  sim:/maquinarefri/dev10
-add wave -position end  sim:/maquinarefri/prod
-add wave -position end  sim:/maquinarefri/pr_state
-add wave -position end  sim:/maquinarefri/nx_state
-force -freeze sim:/maquinarefri/clk 1 0, 0 {50 ps} -r 100
-force -freeze sim:/maquinarefri/rst 1 0
-run
-force -freeze sim:/maquinarefri/rst 0 0
-run
-force -freeze sim:/maquinarefri/x 5 0
-run
-force -freeze sim:/maquinarefri/x 5 0
-run
-run
-run
-run
-run
-run
-do tb_maqEst
-# End time: 16:26:05 on Jan 30,2025, Elapsed time: 0:05:32
-# Errors: 0, Warnings: 0
-# vsim work.maquinaestado(arch_maqest) 
-# Start time: 16:26:05 on Jan 30,2025
-# ** Error: (vsim-3170) Could not find 'maquinaestado(arch_maqest)'.
-#         Searched libraries:
-#             /home/aluno/ELD_IFSC_2/Encontro29/simulation/modelsim/rtl_work
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./tb_maqEst PAUSED at line 25
-do tb_Maqref.do
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarLento
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:26:25 on Jan 30,2025
-# vcom -reportprogress 300 -93 -work work /home/aluno/ELD_IFSC_2/Encontro29/maquinaRefri.vhd 
+# Start time: 15:55:39 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity maquinaRefri
-# -- Compiling architecture arc_maquinaRefri of maquinaRefri
-# End time: 16:26:25 on Jan 30,2025, Elapsed time: 0:00:00
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 15:55:39 on Jan 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim work.maquinarefri(arc_maquinarefri) 
-# Start time: 16:26:05 on Jan 30,2025
+# End time: 15:55:41 on Jan 31,2025, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 0
+# vsim work.maquinadelavar 
+# Start time: 15:55:41 on Jan 31,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.maquinarefri(arc_maquinarefri)
-force -freeze sim:/maquinarefri/x 10 0
-run
-do tb_Maqref.do
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido1
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:27:31 on Jan 30,2025
-# vcom -reportprogress 300 -93 -work work /home/aluno/ELD_IFSC_2/Encontro29/maquinaRefri.vhd 
+# Start time: 16:16:33 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity maquinaRefri
-# -- Compiling architecture arc_maquinaRefri of maquinaRefri
-# End time: 16:27:31 on Jan 30,2025, Elapsed time: 0:00:00
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:16:33 on Jan 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 16:27:31 on Jan 30,2025, Elapsed time: 0:01:26
-# Errors: 1, Warnings: 0
-# vsim work.maquinarefri(arc_maquinarefri) 
-# Start time: 16:27:31 on Jan 30,2025
+# End time: 16:16:34 on Jan 31,2025, Elapsed time: 0:20:53
+# Errors: 0, Warnings: 0
+# vsim work.maquinadelavar 
+# Start time: 16:16:34 on Jan 31,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.maquinarefri(arc_maquinarefri)
-force -freeze sim:/maquinarefri/x 10 0
-run
-do tb_Maqref.do
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido1
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:30:37 on Jan 30,2025
-# vcom -reportprogress 300 -93 -work work /home/aluno/ELD_IFSC_2/Encontro29/maquinaRefri.vhd 
+# Start time: 16:18:10 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity maquinaRefri
-# -- Compiling architecture arc_maquinaRefri of maquinaRefri
-# End time: 16:30:37 on Jan 30,2025, Elapsed time: 0:00:00
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:18:10 on Jan 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 16:30:37 on Jan 30,2025, Elapsed time: 0:03:06
+# End time: 16:18:11 on Jan 31,2025, Elapsed time: 0:01:37
 # Errors: 0, Warnings: 0
-# vsim work.maquinarefri(arc_maquinarefri) 
-# Start time: 16:30:37 on Jan 30,2025
+# vsim work.maquinadelavar 
+# Start time: 16:18:12 on Jan 31,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.maquinarefri(arc_maquinarefri)
-force -freeze sim:/maquinarefri/x 5 0
-run
-force -freeze sim:/maquinarefri/x 10 0
-run
-do tb_Maqref.do
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido1
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:32:33 on Jan 30,2025
-# vcom -reportprogress 300 -93 -work work /home/aluno/ELD_IFSC_2/Encontro29/maquinaRefri.vhd 
+# Start time: 16:18:32 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity maquinaRefri
-# -- Compiling architecture arc_maquinaRefri of maquinaRefri
-# End time: 16:32:33 on Jan 30,2025, Elapsed time: 0:00:00
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:18:32 on Jan 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 16:32:33 on Jan 30,2025, Elapsed time: 0:01:56
+# End time: 16:18:34 on Jan 31,2025, Elapsed time: 0:00:22
 # Errors: 0, Warnings: 0
-# vsim work.maquinarefri(arc_maquinarefri) 
-# Start time: 16:32:33 on Jan 30,2025
+# vsim work.maquinadelavar 
+# Start time: 16:18:34 on Jan 31,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.maquinarefri(arc_maquinarefri)
-force -freeze sim:/maquinarefri/x 0 0
-run
-do tb_Maqref.do
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido1
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:33:39 on Jan 30,2025
-# vcom -reportprogress 300 -93 -work work /home/aluno/ELD_IFSC_2/Encontro29/maquinaRefri.vhd 
+# Start time: 16:18:46 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity maquinaRefri
-# -- Compiling architecture arc_maquinaRefri of maquinaRefri
-# End time: 16:33:39 on Jan 30,2025, Elapsed time: 0:00:00
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:18:46 on Jan 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 16:33:39 on Jan 30,2025, Elapsed time: 0:01:06
+# End time: 16:18:47 on Jan 31,2025, Elapsed time: 0:00:13
 # Errors: 0, Warnings: 0
-# vsim work.maquinarefri(arc_maquinarefri) 
-# Start time: 16:33:39 on Jan 30,2025
+# vsim work.maquinadelavar 
+# Start time: 16:18:47 on Jan 31,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.maquinarefri(arc_maquinarefri)
-run
-do tb_Maqref.do
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido1
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:35:33 on Jan 30,2025
-# vcom -reportprogress 300 -93 -work work /home/aluno/ELD_IFSC_2/Encontro29/maquinaRefri.vhd 
+# Start time: 16:19:05 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity maquinaRefri
-# -- Compiling architecture arc_maquinaRefri of maquinaRefri
-# End time: 16:35:33 on Jan 30,2025, Elapsed time: 0:00:00
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:19:05 on Jan 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 16:35:33 on Jan 30,2025, Elapsed time: 0:01:54
+# End time: 16:19:06 on Jan 31,2025, Elapsed time: 0:00:19
 # Errors: 0, Warnings: 0
-# vsim work.maquinarefri(arc_maquinarefri) 
-# Start time: 16:35:33 on Jan 30,2025
+# vsim work.maquinadelavar 
+# Start time: 16:19:06 on Jan 31,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.maquinarefri(arc_maquinarefri)
-do tb_Maqref.do
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido1
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:36:44 on Jan 30,2025
-# vcom -reportprogress 300 -93 -work work /home/aluno/ELD_IFSC_2/Encontro29/maquinaRefri.vhd 
+# Start time: 16:19:28 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity maquinaRefri
-# -- Compiling architecture arc_maquinaRefri of maquinaRefri
-# End time: 16:36:44 on Jan 30,2025, Elapsed time: 0:00:00
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:19:28 on Jan 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 16:36:44 on Jan 30,2025, Elapsed time: 0:01:11
+# End time: 16:19:29 on Jan 31,2025, Elapsed time: 0:00:23
 # Errors: 0, Warnings: 0
-# vsim work.maquinarefri(arc_maquinarefri) 
-# Start time: 16:36:44 on Jan 30,2025
+# vsim work.maquinadelavar 
+# Start time: 16:19:29 on Jan 31,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.maquinarefri(arc_maquinarefri)
-do tb_Maqref.do
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido1
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:38:38 on Jan 30,2025
-# vcom -reportprogress 300 -93 -work work /home/aluno/ELD_IFSC_2/Encontro29/maquinaRefri.vhd 
+# Start time: 16:19:41 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity maquinaRefri
-# -- Compiling architecture arc_maquinaRefri of maquinaRefri
-# End time: 16:38:38 on Jan 30,2025, Elapsed time: 0:00:00
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:19:41 on Jan 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 16:38:39 on Jan 30,2025, Elapsed time: 0:01:55
+# End time: 16:19:42 on Jan 31,2025, Elapsed time: 0:00:13
 # Errors: 0, Warnings: 0
-# vsim work.maquinarefri(arc_maquinarefri) 
-# Start time: 16:38:39 on Jan 30,2025
+# vsim work.maquinadelavar 
+# Start time: 16:19:42 on Jan 31,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.maquinarefri(arc_maquinarefri)
-do tb_Maqref.do
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido2
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:39:06 on Jan 30,2025
-# vcom -reportprogress 300 -93 -work work /home/aluno/ELD_IFSC_2/Encontro29/maquinaRefri.vhd 
+# Start time: 16:21:10 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity maquinaRefri
-# -- Compiling architecture arc_maquinaRefri of maquinaRefri
-# End time: 16:39:06 on Jan 30,2025, Elapsed time: 0:00:00
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:21:10 on Jan 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 16:39:06 on Jan 30,2025, Elapsed time: 0:00:27
+# End time: 16:21:12 on Jan 31,2025, Elapsed time: 0:01:30
 # Errors: 0, Warnings: 0
-# vsim work.maquinarefri(arc_maquinarefri) 
-# Start time: 16:39:06 on Jan 30,2025
+# vsim work.maquinadelavar 
+# Start time: 16:21:12 on Jan 31,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.maquinarefri(arc_maquinarefri)
-do tb_Maqref.do
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido2
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:40:27 on Jan 30,2025
-# vcom -reportprogress 300 -93 -work work /home/aluno/ELD_IFSC_2/Encontro29/maquinaRefri.vhd 
+# Start time: 16:21:59 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity maquinaRefri
-# -- Compiling architecture arc_maquinaRefri of maquinaRefri
-# End time: 16:40:27 on Jan 30,2025, Elapsed time: 0:00:00
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:21:59 on Jan 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 16:40:27 on Jan 30,2025, Elapsed time: 0:01:21
+# End time: 16:22:00 on Jan 31,2025, Elapsed time: 0:00:48
 # Errors: 0, Warnings: 0
-# vsim work.maquinarefri(arc_maquinarefri) 
-# Start time: 16:40:27 on Jan 30,2025
+# vsim work.maquinadelavar 
+# Start time: 16:22:00 on Jan 31,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.maquinarefri(arc_maquinarefri)
-run
-do tb_Maqref.do
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido2
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:41:45 on Jan 30,2025
-# vcom -reportprogress 300 -93 -work work /home/aluno/ELD_IFSC_2/Encontro29/maquinaRefri.vhd 
+# Start time: 16:23:09 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity maquinaRefri
-# -- Compiling architecture arc_maquinaRefri of maquinaRefri
-# End time: 16:41:45 on Jan 30,2025, Elapsed time: 0:00:00
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:23:09 on Jan 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 16:41:45 on Jan 30,2025, Elapsed time: 0:01:18
+# End time: 16:23:11 on Jan 31,2025, Elapsed time: 0:01:11
 # Errors: 0, Warnings: 0
-# vsim work.maquinarefri(arc_maquinarefri) 
-# Start time: 16:41:45 on Jan 30,2025
+# vsim work.maquinadelavar 
+# Start time: 16:23:11 on Jan 31,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.maquinarefri(arc_maquinarefri)
-do tb_Maqref.do
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido2
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:42:12 on Jan 30,2025
-# vcom -reportprogress 300 -93 -work work /home/aluno/ELD_IFSC_2/Encontro29/maquinaRefri.vhd 
+# Start time: 16:24:13 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity maquinaRefri
-# -- Compiling architecture arc_maquinaRefri of maquinaRefri
-# End time: 16:42:12 on Jan 30,2025, Elapsed time: 0:00:00
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:24:13 on Jan 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 16:42:13 on Jan 30,2025, Elapsed time: 0:00:28
+# End time: 16:24:14 on Jan 31,2025, Elapsed time: 0:01:03
 # Errors: 0, Warnings: 0
-# vsim work.maquinarefri(arc_maquinarefri) 
-# Start time: 16:42:13 on Jan 30,2025
+# vsim work.maquinadelavar 
+# Start time: 16:24:14 on Jan 31,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.maquinarefri(arc_maquinarefri)
-do tb_Maqref.do
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido2
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:42:48 on Jan 30,2025
-# vcom -reportprogress 300 -93 -work work /home/aluno/ELD_IFSC_2/Encontro29/maquinaRefri.vhd 
+# Start time: 16:24:56 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity maquinaRefri
-# -- Compiling architecture arc_maquinaRefri of maquinaRefri
-# End time: 16:42:48 on Jan 30,2025, Elapsed time: 0:00:00
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:24:56 on Jan 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 16:42:49 on Jan 30,2025, Elapsed time: 0:00:36
+# End time: 16:24:57 on Jan 31,2025, Elapsed time: 0:00:43
 # Errors: 0, Warnings: 0
-# vsim work.maquinarefri(arc_maquinarefri) 
-# Start time: 16:42:49 on Jan 30,2025
+# vsim work.maquinadelavar 
+# Start time: 16:24:57 on Jan 31,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.maquinarefri(arc_maquinarefri)
-do tb_Maqref.do
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido2
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:43:37 on Jan 30,2025
-# vcom -reportprogress 300 -93 -work work ../../maquinaRefri.vhd 
+# Start time: 16:26:11 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity maquinaRefri
-# -- Compiling architecture arc_maquinaRefri of maquinaRefri
-# End time: 16:43:37 on Jan 30,2025, Elapsed time: 0:00:00
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:26:11 on Jan 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 16:43:37 on Jan 30,2025, Elapsed time: 0:00:48
+# End time: 16:26:13 on Jan 31,2025, Elapsed time: 0:01:16
 # Errors: 0, Warnings: 0
-# vsim work.maquinarefri(arc_maquinarefri) 
-# Start time: 16:43:37 on Jan 30,2025
+# vsim work.maquinadelavar 
+# Start time: 16:26:13 on Jan 31,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.maquinarefri(arc_maquinarefri)
-# End time: 16:43:59 on Jan 30,2025, Elapsed time: 0:00:22
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido2
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:27:26 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:27:26 on Jan 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:27:27 on Jan 31,2025, Elapsed time: 0:01:14
+# Errors: 0, Warnings: 0
+# vsim work.maquinadelavar 
+# Start time: 16:27:27 on Jan 31,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido2
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:28:41 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:28:41 on Jan 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:28:42 on Jan 31,2025, Elapsed time: 0:01:15
+# Errors: 0, Warnings: 0
+# vsim work.maquinadelavar 
+# Start time: 16:28:42 on Jan 31,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido2
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:29:18 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:29:18 on Jan 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:29:19 on Jan 31,2025, Elapsed time: 0:00:37
+# Errors: 0, Warnings: 0
+# vsim work.maquinadelavar 
+# Start time: 16:29:19 on Jan 31,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido2
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:29:35 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:29:35 on Jan 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:29:36 on Jan 31,2025, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 0
+# vsim work.maquinadelavar 
+# Start time: 16:29:36 on Jan 31,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido2
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:29:47 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:29:47 on Jan 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:29:49 on Jan 31,2025, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 0
+# vsim work.maquinadelavar 
+# Start time: 16:29:49 on Jan 31,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido2
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:30:08 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:30:09 on Jan 31,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 16:30:10 on Jan 31,2025, Elapsed time: 0:00:21
+# Errors: 0, Warnings: 0
+# vsim work.maquinadelavar 
+# Start time: 16:30:10 on Jan 31,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido2
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:30:23 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:30:23 on Jan 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:30:24 on Jan 31,2025, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 0
+# vsim work.maquinadelavar 
+# Start time: 16:30:24 on Jan 31,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido2
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:30:37 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:30:37 on Jan 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:30:38 on Jan 31,2025, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 0
+# vsim work.maquinadelavar 
+# Start time: 16:30:38 on Jan 31,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadelavar(arc_maquinalavar)
+do tb_maqLavarRapido2
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:30:56 on Jan 31,2025
+# vcom -reportprogress 300 -93 -work work ../../maquinaDeLavar.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeLavar
+# -- Compiling architecture arc_maquinaLavar of maquinaDeLavar
+# End time: 16:30:56 on Jan 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:30:57 on Jan 31,2025, Elapsed time: 0:00:19
+# Errors: 0, Warnings: 0
+# vsim work.maquinadelavar 
+# Start time: 16:30:57 on Jan 31,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadelavar(arc_maquinalavar)
+# End time: 16:31:10 on Jan 31,2025, Elapsed time: 0:00:13
 # Errors: 0, Warnings: 0

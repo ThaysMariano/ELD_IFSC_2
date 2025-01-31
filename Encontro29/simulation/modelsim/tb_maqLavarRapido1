@@ -1,0 +1,33 @@
+# Máquina de Lavar Modo: Rápido primeira metade
+
+ vlib rtl_work
+ vmap work rtl_work
+ vmap work rtl_work  
+ vcom -93 -work work {../../maquinaDeLavar.vhd}
+ vsim work.maquinadelavar
+
+add wave -position end  sim:/maquinadelavar/clk
+add wave -position end  sim:/maquinadelavar/rst
+add wave -position end  sim:/maquinadelavar/start
+add wave -position end  sim:/maquinadelavar/rapido
+add wave -position end  sim:/maquinadelavar/nivelCheio
+add wave -position end  sim:/maquinadelavar/nivelVazio
+add wave -position end  sim:/maquinadelavar/M1
+add wave -position end  sim:/maquinadelavar/M2
+add wave -position end  sim:/maquinadelavar/bomba
+add wave -position end  sim:/maquinadelavar/valvula
+add wave -position end  sim:/maquinadelavar/ZT
+add wave -position end  sim:/maquinadelavar/pr_state
+add wave -position end  sim:/maquinadelavar/nx_state
+add wave -position end  sim:/maquinadelavar/tempo
+
+force -freeze sim:/maquinadelavar/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/maquinadelavar/rst 1 0
+force -freeze sim:/maquinadelavar/start 1 0
+force -freeze sim:/maquinadelavar/rapido 1 0
+force -freeze sim:/maquinadelavar/nivelCheio 1 0
+force -freeze sim:/maquinadelavar/nivelVazio 1 0
+force -freeze sim:/maquinadelavar/rst 0 0 
+#run 282000
+run 38300
+
