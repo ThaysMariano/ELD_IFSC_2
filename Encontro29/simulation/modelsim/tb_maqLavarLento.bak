@@ -28,7 +28,7 @@ force -freeze sim:/maquinadelavar/rapido 0 0
 force -freeze sim:/maquinadelavar/nivelCheio 1 0
 force -freeze sim:/maquinadelavar/nivelVazio 1 0
 force -freeze sim:/maquinadelavar/rst 0 0 
-#run 282000
-run 360000
+run 283200
+#run 380000
 
 

@@ -10,10 +10,10 @@ z2
 cModel Technology
 Z0 dC:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro29/simulation/modelsim
 Emaquinadelavar
-Z1 w1738349683
+Z1 w1738674073
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 23
+!i122 6
 R0
 Z4 8../../maquinaDeLavar.vhd
 Z5 F../../maquinaDeLavar.vhd
@@ -23,9 +23,9 @@ V5<HhZ_5UGHZ^mGDUERN<40
 !s100 kQBe^mSVkKDCa6=X?GY5m2
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1738351856
+Z7 !s110 1738674299
 !i10b 1
-Z8 !s108 1738351856.000000
+Z8 !s108 1738674299.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|../../maquinaDeLavar.vhd|
 Z10 !s107 ../../maquinaDeLavar.vhd|
 !i113 1
@@ -35,11 +35,11 @@ Aarc_maquinalavar
 R2
 R3
 Z13 DEx4 work 14 maquinadelavar 0 22 5<HhZ_5UGHZ^mGDUERN<40
-!i122 23
+!i122 6
 l23
-Z14 L18 155
-Z15 V;^YTOKFm>>=3nGcdLo;TZ2
-Z16 !s100 Wmm^:VMWoPboKK4KEMT?F2
+Z14 L18 162
+Z15 V<KXILQX0e?XcD:V57>cM40
+Z16 !s100 M_adK[BQ6cEU8ZbLABj5L2
 R6
 31
 R7

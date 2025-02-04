@@ -36,11 +36,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "nivelVazio",
+					"name" : "rapido",
 					"strict" : false
 				},
 				{
-					"name" : "rapido",
+					"name" : "nivelVazio",
 					"strict" : false
 				},
 				{

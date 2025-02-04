@@ -16,7 +16,7 @@ end entity;
 
 
 architecture arc_maquinaLavar of maquinaDeLavar is
-	type state is (Parado, Enchendo1, ZT1, Batento1, ZT2, Molho, ZT3, Batendo2, Esvaziando1, Enchendo2, Enxague, Esvaziando2, Centrifugando);
+	type state is (Parado, Enchendo1, ZT1, Batento1, ZT2, Molho, ZT3, Batendo2, Esvaziando1, Enchendo2, Enxague, Esvaziando2, ZT4,  Centrifugando);
 	signal pr_state, nx_state : state;
 	signal tempo : integer range 0 to 1200;
 	
@@ -30,6 +30,8 @@ begin
 				pr_state<=nx_state;
 			end if;
 		end process;
+		
+		--contador
 		
 		process(clk, ZT, rst)
 		begin
@@ -150,10 +152,15 @@ begin
 					if(rapido='1') then 
 						nx_state<=Parado;
 					elsif (rapido='0' and nivelVazio='1') then 
-						nx_state<=centrifugando;
+						nx_state<=ZT4;	--ZT4
 					else
 						nx_state<=Esvaziando2;
 					end if;
+					
+				When ZT4 => --ZT4
+					ZT<='1';
+					nx_state<=centrifugando;
+					
 					
 				when centrifugando=>
 					M2<='1';

@@ -31,4 +31,4 @@ force -freeze sim:/maquinadelavar/rst 0 0
 #run 282000
 run 240000
 force -freeze sim:/maquinadelavar/rapido 1 0
-run 13000
+run 13300
