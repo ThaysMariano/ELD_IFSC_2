@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity maquinaDeLavar is
+entity maquinaDeLavarASM is
 port(
 	clk, rst : in std_logic;
 --	tempo : in integer range 0 to 1210;
@@ -15,8 +15,8 @@ end entity;
 -- fazer um contador
 
 
-architecture arc_maquinaLavar of maquinaDeLavar is
-	type state is (Parado, Enchendo1, ZT1, Batento1, ZT2, Molho, ZT3, Batendo2, Esvaziando1, Enchendo2, Enxague, Esvaziando2, ZT4,  Centrifugando);
+architecture arc_maquinaLavarASM of maquinaDeLavarASM is
+	type state is (Parado, Enchendo1, Batento1, Molho, Batendo2, Esvaziando1, Enchendo2, Enxague, Esvaziando2,  Centrifugando, LIXO);
 	signal pr_state, nx_state : state;
 	signal tempo : integer range 0 to 1200;
 	
@@ -70,43 +70,32 @@ begin
 					valvula <= '1';
 					
 					if (nivelCheio= '1') then
-						nx_state<= ZT1;
+						ZT<='1';
+						nx_state<=Batento1;
 					else 
 						nx_state<=Enchendo1;
 					end if;
-					
-				when ZT1 =>
-					ZT<= '1';
-					
-					nx_state<=Batento1;
 					
 				when Batento1 =>
 					M1<='1';
 					
 					if(tempo =120) then
-						nx_state<=ZT2;
+						ZT<='1';
+						nx_state<=Molho;
 					else 
 						nx_state<=Batento1;
 					end if;
-					
-				when ZT2 =>
-					ZT<='1';
-					
-					nx_state<=Molho;
-					
+
 				when Molho =>
 					if (rapido='1') then 
 						nx_state<= Esvaziando1;
 					elsif (rapido='0' and tempo=900) then 
-						nx_state<=ZT3;
+						ZT<='1';
+						nx_state<=Batendo2;
 					else
 						nx_state<=Molho;
 					end if;
-					
-				when ZT3 =>
-					ZT<='1';
-					nx_state<=Batendo2;
-					
+	
 				when Batendo2 =>
 					M1<='1';
 					
@@ -122,9 +111,9 @@ begin
 					if(rapido='1') then
 						nx_state<=Parado;
 					elsif(rapido='0' and nivelVazio='1') then 
-						nx_state<= enchendo2;
+						nx_state<= Enchendo2;
 					else 
-						nx_state<=enchendo2; --Esvaziando1
+						nx_state<=Esvaziando1;
 					end if;
 					
 					
@@ -141,6 +130,7 @@ begin
 					M1<='1';
 					
 					if (tempo=300) then 
+
 						nx_state<=Esvaziando2;
 					else
 						nx_state<=Enxague;
@@ -152,15 +142,11 @@ begin
 					if(rapido='1') then 
 						nx_state<=Parado;
 					elsif (rapido='0' and nivelVazio='1') then 
-						nx_state<=ZT4;	--ZT4
+						ZT<='1';
+						nx_state<=Centrifugando;
 					else
 						nx_state<=Esvaziando2;
 					end if;
-					
-				When ZT4 => --ZT4
-					ZT<='1';
-					nx_state<=centrifugando;
-					
 					
 				when centrifugando=>
 					M2<='1';
@@ -169,8 +155,11 @@ begin
 					if(tempo=300) then
 						nx_state<=Parado;
 					else 
-						nx_state<=centrifugando;
+						nx_state<=Centrifugando;
 					end if;
+					
+					when others =>
+						nx_state<=LIXO;
 				
 			
 	

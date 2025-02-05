@@ -24,15 +24,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "rst",
-					"strict" : false
-				},
-				{
-					"name" : "nivelCheio",
+					"name" : "nivelVazio",
 					"strict" : false
 				},
 				{
@@ -40,7 +32,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "nivelVazio",
+					"name" : "nivelCheio",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
 					"strict" : false
 				},
 				{

@@ -1,17 +1,14 @@
 
-State Machine - |maquinaDeLavar|pr_state
-Name pr_state.Centrifugando pr_state.ZT4 pr_state.Esvaziando2 pr_state.Enxague pr_state.Enchendo2 pr_state.Esvaziando1 pr_state.Batendo2 pr_state.ZT3 pr_state.Molho pr_state.ZT2 pr_state.Batento1 pr_state.ZT1 pr_state.Enchendo1 pr_state.Parado 
-pr_state.Parado 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-pr_state.Enchendo1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-pr_state.ZT1 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-pr_state.Batento1 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-pr_state.ZT2 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-pr_state.Molho 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-pr_state.ZT3 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-pr_state.Batendo2 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-pr_state.Esvaziando1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-pr_state.Enchendo2 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-pr_state.Enxague 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-pr_state.Esvaziando2 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-pr_state.ZT4 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-pr_state.Centrifugando 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State Machine - |maquinaDeLavarASM|pr_state
+Name pr_state.LIXO pr_state.Centrifugando pr_state.Esvaziando2 pr_state.Enxague pr_state.Enchendo2 pr_state.Esvaziando1 pr_state.Batendo2 pr_state.Molho pr_state.Batento1 pr_state.Enchendo1 pr_state.Parado 
+pr_state.Parado 0 0 0 0 0 0 0 0 0 0 0 
+pr_state.Enchendo1 0 0 0 0 0 0 0 0 0 1 1 
+pr_state.Batento1 0 0 0 0 0 0 0 0 1 0 1 
+pr_state.Molho 0 0 0 0 0 0 0 1 0 0 1 
+pr_state.Batendo2 0 0 0 0 0 0 1 0 0 0 1 
+pr_state.Esvaziando1 0 0 0 0 0 1 0 0 0 0 1 
+pr_state.Enchendo2 0 0 0 0 1 0 0 0 0 0 1 
+pr_state.Enxague 0 0 0 1 0 0 0 0 0 0 1 
+pr_state.Esvaziando2 0 0 1 0 0 0 0 0 0 0 1 
+pr_state.Centrifugando 0 1 0 0 0 0 0 0 0 0 1 
+pr_state.LIXO 1 0 0 0 0 0 0 0 0 0 1 

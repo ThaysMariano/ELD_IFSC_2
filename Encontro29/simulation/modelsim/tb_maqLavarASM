@@ -1,0 +1,36 @@
+
+ vlib rtl_work
+ vmap work rtl_work
+
+ vmap work rtl_work 
+
+ vcom -93 -work work {../../maquinaDeLavarASM.vhd}
+ vsim work.maquinadelavarasm(arc_maquinalavarasm)
+
+add wave -position end  sim:/maquinadelavarasm/clk
+add wave -position end  sim:/maquinadelavarasm/rst
+add wave -position end  sim:/maquinadelavarasm/start
+add wave -position end  sim:/maquinadelavarasm/rapido
+add wave -position end  sim:/maquinadelavarasm/nivelCheio
+add wave -position end  sim:/maquinadelavarasm/nivelVazio
+add wave -position end  sim:/maquinadelavarasm/M1
+add wave -position end  sim:/maquinadelavarasm/M2
+add wave -position end  sim:/maquinadelavarasm/bomba
+add wave -position end  sim:/maquinadelavarasm/valvula
+add wave -position end  sim:/maquinadelavarasm/ZT
+add wave -position end  sim:/maquinadelavarasm/pr_state
+add wave -position end  sim:/maquinadelavarasm/nx_state
+add wave -position end  sim:/maquinadelavarasm/tempo
+
+
+force -freeze sim:/maquinadelavarasm/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/maquinadelavarasm/rst 1 0
+force -freeze sim:/maquinadelavarasm/start 1 0
+force -freeze sim:/maquinadelavarasm/rapido 0 0
+force -freeze sim:/maquinadelavarasm/nivelCheio 1 0
+force -freeze sim:/maquinadelavarasm/nivelVazio 1 0
+force -freeze sim:/maquinadelavarasm/rst 0 0 
+run 283300
+#run 380000
+
+

@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity maquinaDeLavar is
+entity maquinaDeLavarASM is
 port(
 	clk, rst : in std_logic;
 --	tempo : in integer range 0 to 1210;
@@ -15,7 +15,7 @@ end entity;
 -- fazer um contador
 
 
-architecture arc_maquinaLavar of maquinaDeLavar is
+architecture arc_maquinaLavarASM of maquinaDeLavarASM is
 	type state is (Parado, Enchendo1, ZT1, Batento1, ZT2, Molho, ZT3, Batendo2, Esvaziando1, Enchendo2, Enxague, Esvaziando2, ZT4,  Centrifugando);
 	signal pr_state, nx_state : state;
 	signal tempo : integer range 0 to 1200;
@@ -124,7 +124,7 @@ begin
 					elsif(rapido='0' and nivelVazio='1') then 
 						nx_state<= enchendo2;
 					else 
-						nx_state<=enchendo2; --Esvaziando1
+						nx_state<=enchendo2;
 					end if;
 					
 					

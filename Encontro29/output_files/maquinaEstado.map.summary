@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue Feb 04 10:01:50 2025
-Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Wed Feb  5 20:02:37 2025
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 Revision Name : maquinaEstado
-Top-level Entity Name : maquinaDeLavar
+Top-level Entity Name : maquinaDeLavarASM
 Family : Cyclone IV E
-Total logic elements : 43
-    Total combinational functions : 43
-    Dedicated logic registers : 25
-Total registers : 25
+Total logic elements : 45
+    Total combinational functions : 45
+    Dedicated logic registers : 21
+Total registers : 21
 Total pins : 11
 Total virtual pins : 0
 Total memory bits : 0
