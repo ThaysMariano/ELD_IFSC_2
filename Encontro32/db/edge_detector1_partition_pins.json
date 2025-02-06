@@ -4,7 +4,7 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "p1",
+					"name" : "p2",
 					"strict" : false
 				},
 				{

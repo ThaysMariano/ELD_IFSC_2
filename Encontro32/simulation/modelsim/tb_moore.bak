@@ -62,5 +62,5 @@ force -freeze sim:/edge_detector1/strobe 1 0
 run 300
 force -freeze sim:/edge_detector1/strobe 0 0
 run 300
-# End time: 17:32:05 on Feb 06,2025, Elapsed time: 0:02:55
-# Errors: 0, Warnings: 0
+
+

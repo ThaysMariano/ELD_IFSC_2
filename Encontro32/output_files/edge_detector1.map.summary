@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Thu Feb  6 17:18:46 2025
+Analysis & Synthesis Status : Successful - Thu Feb  6 17:32:17 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 Revision Name : edge_detector1
-Top-level Entity Name : edge_detector1
+Top-level Entity Name : edge_detector2
 Family : Cyclone IV E
 Total logic elements : 2
     Total combinational functions : 1
-    Dedicated logic registers : 2
-Total registers : 2
+    Dedicated logic registers : 1
+Total registers : 1
 Total pins : 4
 Total virtual pins : 0
 Total memory bits : 0

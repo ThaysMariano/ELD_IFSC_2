@@ -1,5 +1,5 @@
 Analysis & Synthesis report for edge_detector1
-Thu Feb  6 17:18:46 2025
+Thu Feb  6 17:32:17 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -13,12 +13,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |edge_detector1|state_reg
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -45,15 +43,15 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb  6 17:18:46 2025           ;
+; Analysis & Synthesis Status        ; Successful - Thu Feb  6 17:32:17 2025           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Standard Edition ;
 ; Revision Name                      ; edge_detector1                                  ;
-; Top-level Entity Name              ; edge_detector1                                  ;
+; Top-level Entity Name              ; edge_detector2                                  ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Total logic elements               ; 2                                               ;
 ;     Total combinational functions  ; 1                                               ;
-;     Dedicated logic registers      ; 2                                               ;
-; Total registers                    ; 2                                               ;
+;     Dedicated logic registers      ; 1                                               ;
+; Total registers                    ; 1                                               ;
 ; Total pins                         ; 4                                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -67,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                            ; edge_detector1     ; edge_detector1     ;
+; Top-level entity name                                            ; edge_detector2     ; edge_detector1     ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -156,12 +154,10 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 12          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -170,7 +166,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                         ; Library ;
 +----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
-; edge_detector1.vhd               ; yes             ; User VHDL File  ; /home/aluno/ELD_IFSC_2/Encontro32/edge_detector1.vhd ;         ;
+; edge_detector2.vhd               ; yes             ; User VHDL File  ; /home/aluno/ELD_IFSC_2/Encontro32/edge_detector2.vhd ;         ;
 +----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
 
 
@@ -191,8 +187,8 @@ https://fpgasoftware.intel.com/eula.
 ;     -- normal mode                          ; 1            ;
 ;     -- arithmetic mode                      ; 0            ;
 ;                                             ;              ;
-; Total registers                             ; 2            ;
-;     -- Dedicated logic registers            ; 2            ;
+; Total registers                             ; 1            ;
+;     -- Dedicated logic registers            ; 1            ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
 ; I/O pins                                    ; 4            ;
@@ -201,8 +197,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;              ;
 ; Maximum fan-out node                        ; strobe~input ;
 ; Maximum fan-out                             ; 2            ;
-; Total fan-out                               ; 13           ;
-; Average fan-out                             ; 1.18         ;
+; Total fan-out                               ; 10           ;
+; Average fan-out                             ; 1.00         ;
 +---------------------------------------------+--------------+
 
 
@@ -211,31 +207,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
-; |edge_detector1            ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |edge_detector1     ; edge_detector1 ; work         ;
+; |edge_detector2            ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |edge_detector2     ; edge_detector2 ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------+
-; State Machine - |edge_detector1|state_reg                        ;
-+----------------+---------------+----------------+----------------+
-; Name           ; state_reg.one ; state_reg.edge ; state_reg.zero ;
-+----------------+---------------+----------------+----------------+
-; state_reg.zero ; 0             ; 0              ; 0              ;
-; state_reg.edge ; 0             ; 1              ; 1              ;
-; state_reg.one  ; 1             ; 0              ; 1              ;
-+----------------+---------------+----------------+----------------+
-
-
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; state_reg.one                         ; Lost fanout        ;
-; Total Number of Removed Registers = 1 ;                    ;
-+---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -243,10 +217,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2     ;
+; Total registers                              ; 1     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 2     ;
+; Number of registers using Asynchronous Clear ; 1     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -259,14 +233,14 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 4                           ;
-; cycloneiii_ff         ; 2                           ;
-;     CLR               ; 2                           ;
+; cycloneiii_ff         ; 1                           ;
+;     CLR               ; 1                           ;
 ; cycloneiii_lcell_comb ; 1                           ;
 ;     normal            ; 1                           ;
 ;         2 data inputs ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.50                        ;
+; Average LUT depth     ; 0.60                        ;
 +-----------------------+-----------------------------+
 
 
@@ -285,16 +259,18 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
-    Info: Processing started: Thu Feb  6 17:18:38 2025
+    Info: Processing started: Thu Feb  6 17:32:12 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off edge_detector1 -c edge_detector1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file edge_detector1.vhd
     Info (12022): Found design unit 1: edge_detector1-moore_arch File: /home/aluno/ELD_IFSC_2/Encontro32/edge_detector1.vhd Line: 11
     Info (12023): Found entity 1: edge_detector1 File: /home/aluno/ELD_IFSC_2/Encontro32/edge_detector1.vhd Line: 3
-Info (12127): Elaborating entity "edge_detector1" for the top level hierarchy
+Info (12021): Found 2 design units, including 1 entities, in source file edge_detector2.vhd
+    Info (12022): Found design unit 1: edge_detector2-mealy_arch File: /home/aluno/ELD_IFSC_2/Encontro32/edge_detector2.vhd Line: 11
+    Info (12023): Found entity 1: edge_detector2 File: /home/aluno/ELD_IFSC_2/Encontro32/edge_detector2.vhd Line: 3
+Info (12127): Elaborating entity "edge_detector2" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 6 device resources after synthesis - the final resource count might be different
@@ -302,9 +278,9 @@ Info (21057): Implemented 6 device resources after synthesis - the final resourc
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 2 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 479 megabytes
-    Info: Processing ended: Thu Feb  6 17:18:46 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 433 megabytes
+    Info: Processing ended: Thu Feb  6 17:32:17 2025
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:11
 
 
