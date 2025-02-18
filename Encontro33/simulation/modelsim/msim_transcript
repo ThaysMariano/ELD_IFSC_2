@@ -10,7 +10,7 @@
 # 
 # vcom -93 -work work {/home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:34:10 on Feb 13,2025
+# Start time: 14:29:56 on Feb 18,2025
 # vcom -reportprogress 300 -93 -work work /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -34,13 +34,55 @@
 # -- Loading entity seq_mult
 # -- Compiling configuration conf
 # -- Loading entity seq_mult
-# -- Loading architecture sharing_arch of seq_mult
-# End time: 17:34:10 on Feb 13,2025, Elapsed time: 0:00:00
+# -- Loading architecture shift_add_better_arch of seq_mult
+# End time: 14:29:56 on Feb 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # 
 # stdin: <EOF>
-do tb_seq5
+vsim work.seq_mult(shift_add_better_arch)
+# vsim work.seq_mult(shift_add_better_arch) 
+# Start time: 14:30:01 on Feb 18,2025
+# //  ModelSim - Intel FPGA Edition 2020.1 Feb 28 2020 Linux 6.1.0-31-amd64
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim - Intel FPGA Edition and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seq_mult(shift_add_better_arch)
+add wave -position end  sim:/seq_mult/clk
+add wave -position end  sim:/seq_mult/reset
+add wave -position end  sim:/seq_mult/start
+add wave -position end  sim:/seq_mult/a_in
+add wave -position end  sim:/seq_mult/b_in
+add wave -position end  sim:/seq_mult/ready
+add wave -position end  sim:/seq_mult/r
+add wave -position end  sim:/seq_mult/state_reg
+add wave -position end  sim:/seq_mult/state_next
+add wave -position end  sim:/seq_mult/a_reg
+add wave -position end  sim:/seq_mult/a_next
+add wave -position end  sim:/seq_mult/n_reg
+add wave -position end  sim:/seq_mult/n_next
+add wave -position end  sim:/seq_mult/p_reg
+add wave -position end  sim:/seq_mult/p_next
+add wave -position end  sim:/seq_mult/pl_reg
+add wave -position end  sim:/seq_mult/pu_reg
+add wave -position end  sim:/seq_mult/pu_next
+add wave -position end  sim:/seq_mult/WIDTH
+add wave -position end  sim:/seq_mult/C_WIDTH
+add wave -position end  sim:/seq_mult/C_INIT
+do tb_seq8
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
@@ -49,7 +91,7 @@ do tb_seq5
 # vmap work rtl_work 
 # Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:34:18 on Feb 13,2025
+# Start time: 14:30:32 on Feb 18,2025
 # vcom -reportprogress 300 -93 -work work ../../seq_mult.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -73,28 +115,337 @@ do tb_seq5
 # -- Loading entity seq_mult
 # -- Compiling configuration conf
 # -- Loading entity seq_mult
-# -- Loading architecture sharing_arch of seq_mult
-# End time: 17:34:18 on Feb 13,2025, Elapsed time: 0:00:00
+# -- Loading architecture shift_add_better_arch of seq_mult
+# End time: 14:30:32 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:30:32 on Feb 18,2025, Elapsed time: 0:00:31
 # Errors: 0, Warnings: 0
 # vsim work.seq_mult(sharing_arch) 
-# Start time: 17:34:18 on Feb 13,2025
-# //  ModelSim - Intel FPGA Edition 2020.1 Feb 28 2020 Linux 6.1.0-31-amd64
-# //
-# //  Copyright 1991-2020 Mentor Graphics Corporation
-# //  All Rights Reserved.
-# //
-# //  ModelSim - Intel FPGA Edition and its associated documentation contain trade
-# //  secrets and commercial or financial information that are the property of
-# //  Mentor Graphics Corporation and are privileged, confidential,
-# //  and exempt from disclosure under the Freedom of Information Act,
-# //  5 U.S.C. Section 552. Furthermore, this information
-# //  is prohibited from disclosure under the Trade Secrets Act,
-# //  18 U.S.C. Section 1905.
-# //
+# Start time: 14:30:32 on Feb 18,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
 # Loading work.seq_mult(sharing_arch)
-# End time: 17:34:50 on Feb 13,2025, Elapsed time: 0:00:32
+# ** UI-Msg: (vish-4014) No objects found matching '/seq_mult/p_reg'.
+# Error in macro ./tb_seq8 line 26
+# ** UI-Msg: (vish-4014) No objects found matching '/seq_mult/p_reg'.
+#     while executing
+# "add wave -position end  sim:/seq_mult/p_reg"
+do tb_seq8
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:30:52 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../seq_mult.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seq_mult
+# -- Compiling architecture mult_seg_arch of seq_mult
+# -- Compiling architecture four_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture two_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture one_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture sharing_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture mealy_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture shift_add_raw_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture shift_add_better_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling configuration conf
+# -- Loading entity seq_mult
+# -- Loading architecture shift_add_better_arch of seq_mult
+# End time: 14:30:52 on Feb 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# End time: 14:30:52 on Feb 18,2025, Elapsed time: 0:00:20
+# Errors: 0, Warnings: 0
+# vsim work.seq_mult(sharing_archshift_add_better_arch ) 
+# Start time: 14:30:52 on Feb 18,2025
+# ** Error: (vsim-3170) Could not find 'work.seq_mult(sharing_archshift_add_better_arch'.
+#         Searched libraries:
+#             /home/aluno/ELD_IFSC_2/Encontro33/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./tb_seq8 PAUSED at line 9
+do tb_seq8
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:31:27 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../seq_mult.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seq_mult
+# -- Compiling architecture mult_seg_arch of seq_mult
+# -- Compiling architecture four_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture two_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture one_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture sharing_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture mealy_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture shift_add_raw_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture shift_add_better_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling configuration conf
+# -- Loading entity seq_mult
+# -- Loading architecture shift_add_better_arch of seq_mult
+# End time: 14:31:27 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.seq_mult(shift_add_better_arch ) 
+# Start time: 14:30:52 on Feb 18,2025
+# ** Error: (vsim-3170) Could not find 'work.seq_mult(shift_add_better_arch'.
+#         Searched libraries:
+#             /home/aluno/ELD_IFSC_2/Encontro33/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./tb_seq8 PAUSED at line 9
+add wave -position end  sim:/seq_mult/C_INIT
+# Unrecognized dataset prefix: sim
+do tb_seq8
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:31:50 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../seq_mult.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seq_mult
+# -- Compiling architecture mult_seg_arch of seq_mult
+# -- Compiling architecture four_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture two_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture one_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture sharing_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture mealy_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture shift_add_raw_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture shift_add_better_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling configuration conf
+# -- Loading entity seq_mult
+# -- Loading architecture shift_add_better_arch of seq_mult
+# End time: 14:31:50 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.seq_mult(shift_add_better_arch) 
+# Start time: 14:30:52 on Feb 18,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seq_mult(shift_add_better_arch)
+do tb_seq8
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:35:10 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../seq_mult.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seq_mult
+# -- Compiling architecture mult_seg_arch of seq_mult
+# -- Compiling architecture four_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture two_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture one_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture sharing_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture mealy_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture shift_add_raw_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture shift_add_better_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling configuration conf
+# -- Loading entity seq_mult
+# -- Loading architecture shift_add_better_arch of seq_mult
+# End time: 14:35:10 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:35:10 on Feb 18,2025, Elapsed time: 0:04:18
+# Errors: 2, Warnings: 0
+# vsim work.seq_mult(shift_add_better_arch) 
+# Start time: 14:35:10 on Feb 18,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seq_mult(shift_add_better_arch)
+do tb_seq8
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:43:54 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../seq_mult.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seq_mult
+# -- Compiling architecture mult_seg_arch of seq_mult
+# -- Compiling architecture four_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture two_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture one_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture sharing_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture mealy_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture shift_add_raw_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture shift_add_better_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling configuration conf
+# -- Loading entity seq_mult
+# -- Loading architecture shift_add_better_arch of seq_mult
+# End time: 14:43:54 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:43:55 on Feb 18,2025, Elapsed time: 0:08:45
+# Errors: 0, Warnings: 0
+# vsim work.seq_mult(shift_add_better_arch) 
+# Start time: 14:43:55 on Feb 18,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seq_mult(shift_add_better_arch)
+do tb_seq8
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:44:51 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../seq_mult.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seq_mult
+# -- Compiling architecture mult_seg_arch of seq_mult
+# -- Compiling architecture four_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture two_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture one_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture sharing_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture mealy_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture shift_add_raw_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture shift_add_better_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling configuration conf
+# -- Loading entity seq_mult
+# -- Loading architecture shift_add_better_arch of seq_mult
+# End time: 14:44:52 on Feb 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 14:44:52 on Feb 18,2025, Elapsed time: 0:00:57
+# Errors: 0, Warnings: 0
+# vsim work.seq_mult(shift_add_better_arch) 
+# Start time: 14:44:52 on Feb 18,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seq_mult(shift_add_better_arch)
+do tb_seq8
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying /opt/altera/intelFPGA/20.1/modelsim_ae/linuxaloem/../modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:45:38 on Feb 18,2025
+# vcom -reportprogress 300 -93 -work work ../../seq_mult.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seq_mult
+# -- Compiling architecture mult_seg_arch of seq_mult
+# -- Compiling architecture four_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture two_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture one_seg_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture sharing_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture mealy_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture shift_add_raw_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling architecture shift_add_better_arch of seq_mult
+# -- Loading entity seq_mult
+# -- Compiling configuration conf
+# -- Loading entity seq_mult
+# -- Loading architecture shift_add_better_arch of seq_mult
+# End time: 14:45:38 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:45:38 on Feb 18,2025, Elapsed time: 0:00:46
+# Errors: 0, Warnings: 0
+# vsim work.seq_mult(shift_add_better_arch) 
+# Start time: 14:45:38 on Feb 18,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seq_mult(shift_add_better_arch)

@@ -25,8 +25,8 @@ add wave -position end  sim:/seq_mult/n_reg
 add wave -position end  sim:/seq_mult/n_next
 add wave -position end  sim:/seq_mult/r_reg
 add wave -position end  sim:/seq_mult/r_next
-add wave -position end  sim:/seq_mult/adder_out
-add wave -position end  sim:/seq_mult/sub_out
+#add wave -position end  sim:/seq_mult/adder_out
+#add wave -position end  sim:/seq_mult/sub_out
 add wave -position end  sim:/seq_mult/ready
 force -freeze sim:/seq_mult/clk 1 0, 0 {50 ps} -r 100
 

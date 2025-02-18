@@ -1,5 +1,5 @@
 Analysis & Synthesis report for seq_mult
-Thu Feb 13 17:23:42 2025
+Tue Feb 18 14:53:09 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -13,7 +13,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |seq_mult|state_reg
+  8. Registers Removed During Synthesis
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
  11. Post-Synthesis Netlist Statistics for Top Partition
@@ -45,15 +45,15 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 13 17:23:42 2025           ;
+; Analysis & Synthesis Status        ; Successful - Tue Feb 18 14:53:09 2025           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Standard Edition ;
 ; Revision Name                      ; seq_mult                                        ;
 ; Top-level Entity Name              ; seq_mult                                        ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 106                                             ;
-;     Total combinational functions  ; 97                                              ;
-;     Dedicated logic registers      ; 37                                              ;
-; Total registers                    ; 37                                              ;
+; Total logic elements               ; 17                                              ;
+;     Total combinational functions  ; 17                                              ;
+;     Dedicated logic registers      ; 13                                              ;
+; Total registers                    ; 13                                              ;
 ; Total pins                         ; 36                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -179,30 +179,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 106       ;
+; Estimated Total logic elements              ; 17        ;
 ;                                             ;           ;
-; Total combinational functions               ; 97        ;
+; Total combinational functions               ; 17        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 36        ;
-;     -- 3 input functions                    ; 34        ;
-;     -- <=2 input functions                  ; 27        ;
+;     -- 4 input functions                    ; 7         ;
+;     -- 3 input functions                    ; 9         ;
+;     -- <=2 input functions                  ; 1         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 68        ;
-;     -- arithmetic mode                      ; 29        ;
+;     -- normal mode                          ; 17        ;
+;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
-; Total registers                             ; 37        ;
-;     -- Dedicated logic registers            ; 37        ;
+; Total registers                             ; 13        ;
+;     -- Dedicated logic registers            ; 13        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 36        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 37        ;
-; Total fan-out                               ; 470       ;
-; Average fan-out                             ; 2.28      ;
+; Maximum fan-out node                        ; state_reg ;
+; Maximum fan-out                             ; 16        ;
+; Total fan-out                               ; 148       ;
+; Average fan-out                             ; 1.45      ;
 +---------------------------------------------+-----------+
 
 
@@ -211,23 +211,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |seq_mult                  ; 97 (97)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |seq_mult           ; seq_mult    ; work         ;
+; |seq_mult                  ; 17 (17)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |seq_mult           ; seq_mult    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------+
-; State Machine - |seq_mult|state_reg                                                              ;
-+----------------+---------------+---------------+----------------+---------------+----------------+
-; Name           ; state_reg.op2 ; state_reg.op1 ; state_reg.load ; state_reg.ab0 ; state_reg.idle ;
-+----------------+---------------+---------------+----------------+---------------+----------------+
-; state_reg.idle ; 0             ; 0             ; 0              ; 0             ; 0              ;
-; state_reg.ab0  ; 0             ; 0             ; 0              ; 1             ; 1              ;
-; state_reg.load ; 0             ; 0             ; 1              ; 0             ; 1              ;
-; state_reg.op1  ; 0             ; 1             ; 0              ; 0             ; 1              ;
-; state_reg.op2  ; 1             ; 0             ; 0              ; 0             ; 1              ;
-+----------------+---------------+---------------+----------------+---------------+----------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; p_reg[16]                             ; Lost fanout                            ;
+; p_reg[8,9,11..15]                     ; Merged with p_reg[10]                  ;
+; p_reg[10]                             ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 9 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -235,12 +233,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 37    ;
+; Total registers                              ; 13    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 37    ;
+; Number of registers using Asynchronous Clear ; 13    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Clock Enable       ; 7     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -250,8 +248,8 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |seq_mult|state_next.ab0   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |seq_mult|Selector2        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |seq_mult|p_reg[0]         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |seq_mult|n_next[3]        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -261,21 +259,19 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 36                          ;
-; cycloneiii_ff         ; 37                          ;
-;     CLR               ; 29                          ;
-;     ENA CLR           ; 8                           ;
-; cycloneiii_lcell_comb ; 98                          ;
-;     arith             ; 29                          ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 15                          ;
-;     normal            ; 69                          ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 11                          ;
-;         3 data inputs ; 19                          ;
-;         4 data inputs ; 36                          ;
+; cycloneiii_ff         ; 13                          ;
+;     CLR               ; 6                           ;
+;     ENA CLR           ; 7                           ;
+; cycloneiii_lcell_comb ; 19                          ;
+;     normal            ; 19                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 7                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.70                        ;
-; Average LUT depth     ; 3.94                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.16                        ;
 +-----------------------+-----------------------------+
 
 
@@ -294,7 +290,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
-    Info: Processing started: Thu Feb 13 17:23:36 2025
+    Info: Processing started: Tue Feb 18 14:53:03 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off seq_mult -c seq_mult
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -310,17 +306,36 @@ Info (12021): Found 10 design units, including 1 entities, in source file seq_mu
     Info (12022): Found design unit 9: conf File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 628
     Info (12023): Found entity 1: seq_mult File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 7
 Info (12127): Elaborating entity "seq_mult" for the top level hierarchy
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "r[8]" is stuck at GND File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 13
+    Warning (13410): Pin "r[9]" is stuck at GND File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 13
+    Warning (13410): Pin "r[10]" is stuck at GND File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 13
+    Warning (13410): Pin "r[11]" is stuck at GND File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 13
+    Warning (13410): Pin "r[12]" is stuck at GND File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 13
+    Warning (13410): Pin "r[13]" is stuck at GND File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 13
+    Warning (13410): Pin "r[14]" is stuck at GND File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 13
+    Warning (13410): Pin "r[15]" is stuck at GND File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 13
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 148 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "a_in[0]" File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 11
+    Warning (15610): No output dependent on input pin "a_in[1]" File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 11
+    Warning (15610): No output dependent on input pin "a_in[2]" File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 11
+    Warning (15610): No output dependent on input pin "a_in[3]" File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 11
+    Warning (15610): No output dependent on input pin "a_in[4]" File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 11
+    Warning (15610): No output dependent on input pin "a_in[5]" File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 11
+    Warning (15610): No output dependent on input pin "a_in[6]" File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 11
+    Warning (15610): No output dependent on input pin "a_in[7]" File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 11
+Info (21057): Implemented 53 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 112 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 477 megabytes
-    Info: Processing ended: Thu Feb 13 17:23:42 2025
+    Info (21061): Implemented 17 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 471 megabytes
+    Info: Processing ended: Tue Feb 18 14:53:09 2025
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Total CPU time (on all processors): 00:00:12
 
 

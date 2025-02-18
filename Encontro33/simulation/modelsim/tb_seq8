@@ -6,14 +6,13 @@
 
  vcom -93 -work work {../../seq_mult.vhd}
 
-vsim work.seq_mult(sharing_arch)
+vsim work.seq_mult(shift_add_better_arch)
 
 add wave -position end  sim:/seq_mult/clk
 add wave -position end  sim:/seq_mult/reset
 add wave -position end  sim:/seq_mult/start
 add wave -position end  sim:/seq_mult/a_in
 add wave -position end  sim:/seq_mult/b_in
-add wave -position end  sim:/seq_mult/r
 add wave -position end  sim:/seq_mult/state_reg
 add wave -position end  sim:/seq_mult/state_next
 #add wave -position end  sim:/seq_mult/a_is_0
@@ -28,10 +27,8 @@ add wave -position end  sim:/seq_mult/p_next
 add wave -position end  sim:/seq_mult/pl_reg
 add wave -position end  sim:/seq_mult/pu_reg
 add wave -position end  sim:/seq_mult/pu_next
-add wave -position end  sim:/seq_mult/WIDTH
-add wave -position end  sim:/seq_mult/C_WIDTH
 add wave -position end  sim:/seq_mult/C_INIT
-
+add wave -position end  sim:/seq_mult/r
 add wave -position end  sim:/seq_mult/ready
 force -freeze sim:/seq_mult/clk 1 0, 0 {50 ps} -r 100
 
@@ -45,36 +42,37 @@ force -freeze sim:/seq_mult/start 1 0
 force -freeze sim:/seq_mult/reset 0 0
 run 300
 force -freeze sim:/seq_mult/start 0 0
-run 500
+run 800
 
 #31 x 2
 force -freeze sim:/seq_mult/start 0 0
 force -freeze sim:/seq_mult/a_in 00000010 0
 force -freeze sim:/seq_mult/b_in 00011111 0
-run
+run 200
 force -freeze sim:/seq_mult/start 1 0
 run 300
 force -freeze sim:/seq_mult/start 0 0
-run 3900
+run 2900
 
 
 #9 x 31
+force -freeze sim:/seq_mult/start 0 0
 force -freeze sim:/seq_mult/a_in 00001001 0
 force -freeze sim:/seq_mult/b_in 00011111 0
 force -freeze sim:/seq_mult/start 1 0
 run 300
 force -freeze sim:/seq_mult/start 0 0
-run 3200
+run 2200
 
 
 #31 x 9
+force -freeze sim:/seq_mult/start 0 0
 force -freeze sim:/seq_mult/a_in 00011111 0
 force -freeze sim:/seq_mult/b_in 00001001 0
 force -freeze sim:/seq_mult/start 1 0
 run 300
 force -freeze sim:/seq_mult/start 0 0
 run 2200
-
 
 
 

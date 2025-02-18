@@ -1,5 +1,5 @@
 Flow report for seq_mult
-Thu Feb 13 17:27:05 2025
+Tue Feb 18 14:53:09 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -41,22 +41,22 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Feb 13 17:27:03 2025           ;
+; Flow Status                        ; Successful - Tue Feb 18 14:53:09 2025           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Standard Edition ;
 ; Revision Name                      ; seq_mult                                        ;
 ; Top-level Entity Name              ; seq_mult                                        ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE6E22A7                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 97 / 6,272 ( 2 % )                              ;
-;     Total combinational functions  ; 97 / 6,272 ( 2 % )                              ;
-;     Dedicated logic registers      ; 37 / 6,272 ( < 1 % )                            ;
-; Total registers                    ; 37                                              ;
-; Total pins                         ; 36 / 92 ( 39 % )                                ;
+; Total logic elements               ; 17                                              ;
+;     Total combinational functions  ; 17                                              ;
+;     Dedicated logic registers      ; 13                                              ;
+; Total registers                    ; 13                                              ;
+; Total pins                         ; 36                                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 276,480 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                                  ;
-; Total PLLs                         ; 0 / 2 ( 0 % )                                   ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/13/2025 17:23:37 ;
+; Start date & time ; 02/18/2025 14:53:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; seq_mult            ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 185410946189744.173947821736233        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 185410946189744.173990118421182        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -98,10 +98,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 477 MB              ; 00:00:11                           ;
-; Fitter               ; 00:00:05     ; 1.0                     ; 1550 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.1                     ; 535 MB              ; 00:00:01                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:16                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 471 MB              ; 00:00:12                           ;
+; Total                ; 00:00:06     ; --                      ; --                  ; 00:00:12                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,8 +109,6 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Machine Hostname    ; OS Name          ; OS Version ; Processor type ;
 +----------------------+---------------------+------------------+------------+----------------+
 ; Analysis & Synthesis ; sje-lin-sidi-918566 ; Debian GNU/Linux ; 12         ; x86_64         ;
-; Fitter               ; sje-lin-sidi-918566 ; Debian GNU/Linux ; 12         ; x86_64         ;
-; Timing Analyzer      ; sje-lin-sidi-918566 ; Debian GNU/Linux ; 12         ; x86_64         ;
 +----------------------+---------------------+------------------+------------+----------------+
 
 
@@ -120,8 +116,6 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off seq_mult -c seq_mult
-quartus_fit --read_settings_files=on --write_settings_files=off seq_mult -c seq_mult
-quartus_sta seq_mult -c seq_mult
 
 
 
