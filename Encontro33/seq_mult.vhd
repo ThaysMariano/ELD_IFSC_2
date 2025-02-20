@@ -4,6 +4,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+--fazer a*b  vetor p unsigned e a saida p std_logic
 entity seq_mult is
    port(
       clk, reset: in std_logic;
@@ -536,7 +537,7 @@ begin
             b_next <= "0" & b_reg (WIDTH-1 downto 1);
             a_next <= a_reg(2*WIDTH-2 downto 0) & "0";
             if (n_next /= "0000") then
-               if a_next(0)='1' then
+               if b_next(0)='1' then
                   state_next <= add;
                else
                   state_next <= shift;
@@ -604,17 +605,20 @@ begin
                state_next <= idle;
             end if;
             ready <='1';
-         when add_shft =>
+            when add_shft =>
             n_next <= n_reg - 1;
             -- add if multiplier bit is '1'
             if (p_reg(0)='1') then
-               pu_next <= pu_reg + ("0" & a_reg);
+                    p_next <= '0' & pu_reg + ('0' & a_reg) &
+                      pl_reg(WIDTH-1 downto 1);                
+               -- pu_next <= pu_reg + ('0' & a_reg);
             else
-               pu_next <= pu_reg;
+                    p_next <= '0' & pu_reg &
+                      pl_reg(WIDTH-1 downto 1);                
+               --pu_next <= pu_reg;
             end if;
             --shift
-            p_next <= "0" & pu_next &
-                      pl_reg(WIDTH-1 downto 1);
+            --p_next <= '0' & pu_next & pl_reg(WIDTH-1 downto 1);
             if (n_next /= "0000") then
                state_next <= add_shft;
             else
@@ -626,12 +630,12 @@ begin
 end shift_add_better_arch;
 
 configuration conf of seq_mult is
---    for mult_seg_arch end for;
+    for mult_seg_arch end for;
 --    for four_seg_arch end for;
 --    for two_seg_arch end for;
 --    for one_seg_arch end for;
 --    for sharing_arch end for;
 --    for mealy_arch end for;
 --    for shift_add_raw_arch end for;
-    for shift_add_better_arch end for;
+--    for shift_add_better_arch end for;
 end configuration;

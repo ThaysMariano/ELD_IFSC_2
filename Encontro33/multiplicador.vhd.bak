@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+--fazer a*b  vetor p unsigned e a saida p std_logic
+entity multiplicador is
+   port(
+      clk, reset: in std_logic;
+      start: in std_logic;
+      a_in, b_in: in std_logic_vector(7 downto 0);
+      ready: out std_logic;
+      r: out std_logic_vector(15 downto 0)
+   );
+end multiplicador;

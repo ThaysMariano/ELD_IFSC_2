@@ -12,36 +12,36 @@ Z0 d/home/aluno/ELD_IFSC_2/Encontro33/simulation/modelsim
 Cconf
 eseq_mult
 ashift_add_better_arch
-DAx4 work 8 seq_mult 21 shift_add_better_arch 22 9c<NTP6SZmK]E44lI=ice1
+DAx4 work 8 seq_mult 21 shift_add_better_arch 22 3eP=NcF]kXJP:^nmZ7M`n3
 Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z4 DEx4 work 8 seq_mult 0 22 Q]ZT2l2QmoHG@AI8NNiDZ2
-!i122 8
-Z5 w1739899521
+!i122 1
+Z5 w1740078399
 R0
 Z6 8../../seq_mult.vhd
 Z7 F../../seq_mult.vhd
 l0
-L628 1
-VoB`X_i?hb=GjdOcfbL0F`3
-!s100 LZ_oK>_;N2B88VcO?>aT>2
+L631 1
+V^Ho1dO7il8okc_HY>FYSb2
+!s100 c817IRY<^^:?L:Nho9:eL1
 Z8 OV;C;2020.1;71
 31
-Z9 !s110 1739900738
+Z9 !s110 1740078470
 !i10b 0
-Z10 !s108 1739900738.000000
+Z10 !s108 1740078469.000000
 Z11 !s90 -reportprogress|300|-93|-work|work|../../seq_mult.vhd|
-Z12 !s107 ../../seq_mult.vhd|
+!s107 ../../seq_mult.vhd|
 !i113 1
-Z13 o-93 -work work
-Z14 tExplicit 1 CvgOpt 0
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
 Eseq_mult
 R5
 R1
 R2
 R3
-!i122 8
+!i122 1
 R0
 R6
 R7
@@ -55,56 +55,56 @@ R9
 !i10b 1
 R10
 R11
-R12
+Z14 !s107 ../../seq_mult.vhd|
 !i113 1
+R12
 R13
-R14
 Ashift_add_better_arch
 R1
 R2
 R3
 R4
-!i122 8
+!i122 1
 l572
-Z15 L556 71
-Z16 V9c<NTP6SZmK]E44lI=ice1
-Z17 !s100 QT?7=ZOOGba1DG9?J80e@2
+Z15 L556 74
+Z16 V3eP=NcF]kXJP:^nmZ7M`n3
+Z17 !s100 6a_:iDnfZYL9Wlj^cJW_21
 R8
 31
 R9
 !i10b 1
 R10
 R11
-R12
-!i113 1
-R13
 R14
+!i113 1
+R12
+R13
 Ashift_add_raw_arch
 R1
 R2
 R3
 R4
-!i122 8
+!i122 1
 l488
 Z18 L478 73
-Z19 VFm0A@e:e7>kMGdT8YTOg;2
-Z20 !s100 90;FQj8EPZAM6k08kgMYa2
+Z19 VCM>Z[Yf4cf7>8eecgb0KT1
+Z20 !s100 1Fh1fImZ6Zg=:0`E9@Hok0
 R8
 31
 R9
 !i10b 1
 R10
 R11
-R12
-!i113 1
-R13
 R14
+!i113 1
+R12
+R13
 Amealy_arch
 R1
 R2
 R3
 R4
-!i122 8
+!i122 1
 l422
 Z21 L415 58
 Z22 V4dkJS8l71E7=4cW@0T6U`2
@@ -115,16 +115,16 @@ R9
 !i10b 1
 R10
 R11
-R12
-!i113 1
-R13
 R14
+!i113 1
+R12
+R13
 Asharing_arch
 R1
 R2
 R3
 R4
-!i122 8
+!i122 1
 l336
 Z24 L327 83
 Z25 V`2Whh[Dib^Pk0Q][LBcMF1
@@ -135,16 +135,16 @@ R9
 !i10b 1
 R10
 R11
-R12
-!i113 1
-R13
 R14
+!i113 1
+R12
+R13
 Aone_seg_arch
 R1
 R2
 R3
 R4
-!i122 8
+!i122 1
 l281
 Z27 L275 48
 Z28 V?_`O;`ID12g<iG@7[VQed2
@@ -155,16 +155,16 @@ R9
 !i10b 1
 R10
 R11
-R12
-!i113 1
-R13
 R14
+!i113 1
+R12
+R13
 Atwo_seg_arch
 R1
 R2
 R3
 R4
-!i122 8
+!i122 1
 l211
 Z30 L204 66
 Z31 V@B1CL[kMXMWLHE_^NlQ9V1
@@ -175,16 +175,16 @@ R9
 !i10b 1
 R10
 R11
-R12
-!i113 1
-R13
 R14
+!i113 1
+R12
+R13
 Afour_seg_arch
 R1
 R2
 R3
 R4
-!i122 8
+!i122 1
 l124
 Z33 L117 82
 Z34 VOm6l8oj9295Hn99Bc1LoR2
@@ -195,16 +195,16 @@ R9
 !i10b 1
 R10
 R11
-R12
-!i113 1
-R13
 R14
+!i113 1
+R12
+R13
 Amult_seg_arch
 R1
 R2
 R3
 R4
-!i122 8
+!i122 1
 l27
 Z36 L17 94
 Z37 V2=>Dn[M`<RNP;PU>lPLKU0
@@ -215,7 +215,7 @@ R9
 !i10b 1
 R10
 R11
-R12
-!i113 1
-R13
 R14
+!i113 1
+R12
+R13
