@@ -1,16 +1,16 @@
-Fitter Status : Successful - Thu Feb 20 17:07:23 2025
-Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Standard Edition
+Fitter Status : Successful - Tue Feb 25 17:34:13 2025
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : seq_mult
-Top-level Entity Name : multiplicador
+Top-level Entity Name : seq_mult
 Family : Cyclone IV E
-Device : EP4CE30F29C6
+Device : EP4CE6E22A7
 Timing Models : Final
-Total logic elements : 1,939 / 28,848 ( 7 % )
-    Total combinational functions : 1,921 / 28,848 ( 7 % )
-    Dedicated logic registers : 256 / 28,848 ( < 1 % )
-Total registers : 256
-Total pins : 516 / 533 ( 97 % )
+Total logic elements : 59 / 6,272 ( < 1 % )
+    Total combinational functions : 51 / 6,272 ( < 1 % )
+    Dedicated logic registers : 33 / 6,272 ( < 1 % )
+Total registers : 33
+Total pins : 36 / 92 ( 39 % )
 Total virtual pins : 0
-Total memory bits : 0 / 608,256 ( 0 % )
-Embedded Multiplier 9-bit elements : 127 / 132 ( 96 % )
-Total PLLs : 0 / 4 ( 0 % )
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

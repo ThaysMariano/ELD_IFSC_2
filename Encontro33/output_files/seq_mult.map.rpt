@@ -1,6 +1,6 @@
 Analysis & Synthesis report for seq_mult
-Thu Feb 20 17:19:42 2025
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
+Tue Feb 25 17:34:02 2025
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -14,12 +14,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |multiplicador
- 10. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 11. lpm_mult Parameter Settings by Entity Instance
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -43,24 +41,24 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 20 17:19:42 2025           ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Standard Edition ;
-; Revision Name                      ; seq_mult                                        ;
-; Top-level Entity Name              ; multiplicador                                   ;
-; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 17,411                                          ;
-;     Total combinational functions  ; 17,155                                          ;
-;     Dedicated logic registers      ; 512                                             ;
-; Total registers                    ; 512                                             ;
-; Total pins                         ; 516                                             ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
-+------------------------------------+-------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Feb 25 17:34:02 2025       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; seq_mult                                    ;
+; Top-level Entity Name              ; seq_mult                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 59                                          ;
+;     Total combinational functions  ; 51                                          ;
+;     Dedicated logic registers      ; 33                                          ;
+; Total registers                    ; 33                                          ;
+; Total pins                         ; 36                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -68,8 +66,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; EP4CE30F29C6       ;                    ;
-; Top-level entity name                                            ; multiplicador      ; seq_mult           ;
+; Device                                                           ; EP4CE6E22A7        ;                    ;
+; Top-level entity name                                            ; seq_mult           ; seq_mult           ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; DSP Block Balancing                                              ; Logic Elements     ; Auto               ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -154,39 +152,25 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 32          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.03        ;
-; Maximum used               ; 12          ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
-;     Processor 3            ;   0.4%      ;
-;     Processor 4            ;   0.4%      ;
-;     Processor 5            ;   0.3%      ;
-;     Processor 6            ;   0.3%      ;
-;     Processor 7            ;   0.3%      ;
-;     Processor 8            ;   0.3%      ;
-;     Processors 9-12        ;   0.2%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; multiplicador.vhd                ; yes             ; User VHDL File               ; /home/aluno/ELD_IFSC_2/Encontro33/multiplicador.vhd                        ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /opt/altera/intelFPGA/20.1/quartus/libraries/megafunctions/lpm_mult.tdf    ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; /opt/altera/intelFPGA/20.1/quartus/libraries/megafunctions/aglobal201.inc  ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /opt/altera/intelFPGA/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; /opt/altera/intelFPGA/20.1/quartus/libraries/megafunctions/multcore.inc    ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; /opt/altera/intelFPGA/20.1/quartus/libraries/megafunctions/bypassff.inc    ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; /opt/altera/intelFPGA/20.1/quartus/libraries/megafunctions/altshift.inc    ;         ;
-; db/mult_ogu.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/aluno/ELD_IFSC_2/Encontro33/db/mult_ogu.tdf                          ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                   ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+; seq_mult.vhd                     ; yes             ; User VHDL File  ; C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -194,42 +178,40 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 17,411    ;
+; Estimated Total logic elements              ; 59        ;
 ;                                             ;           ;
-; Total combinational functions               ; 17155     ;
+; Total combinational functions               ; 51        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 8300      ;
-;     -- 3 input functions                    ; 8521      ;
-;     -- <=2 input functions                  ; 334       ;
+;     -- 4 input functions                    ; 16        ;
+;     -- 3 input functions                    ; 16        ;
+;     -- <=2 input functions                  ; 19        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 8650      ;
-;     -- arithmetic mode                      ; 8505      ;
+;     -- normal mode                          ; 29        ;
+;     -- arithmetic mode                      ; 22        ;
 ;                                             ;           ;
-; Total registers                             ; 512       ;
-;     -- Dedicated logic registers            ; 512       ;
+; Total registers                             ; 33        ;
+;     -- Dedicated logic registers            ; 33        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 516       ;
+; I/O pins                                    ; 36        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 512       ;
-; Total fan-out                               ; 61548     ;
-; Average fan-out                             ; 3.29      ;
+; Maximum fan-out node                        ; state_reg ;
+; Maximum fan-out                             ; 36        ;
+; Total fan-out                               ; 340       ;
+; Average fan-out                             ; 2.18      ;
 +---------------------------------------------+-----------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                               ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Entity Name   ; Library Name ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+---------------+--------------+
-; |multiplicador                  ; 17155 (256)         ; 512 (512)                 ; 0           ; 0            ; 0       ; 0         ; 516  ; 0            ; |multiplicador                                        ; multiplicador ; work         ;
-;    |lpm_mult:Mult0|             ; 16899 (0)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|lpm_mult:Mult0                         ; lpm_mult      ; work         ;
-;       |mult_ogu:auto_generated| ; 16899 (16899)       ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|lpm_mult:Mult0|mult_ogu:auto_generated ; mult_ogu      ; work         ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+---------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |seq_mult                  ; 51 (51)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |seq_mult           ; seq_mult    ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -238,79 +220,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 512   ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 33    ;
+; Number of registers using Synchronous Clear  ; 16    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 512   ;
+; Number of registers using Asynchronous Clear ; 33    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 24    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |multiplicador ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; W              ; 128   ; Signed Integer                                       ;
-+----------------+-------+------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                     ;
-+------------------------------------------------+--------------+---------------------+
-; Parameter Name                                 ; Value        ; Type                ;
-+------------------------------------------------+--------------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 128          ; Untyped             ;
-; LPM_WIDTHB                                     ; 128          ; Untyped             ;
-; LPM_WIDTHP                                     ; 256          ; Untyped             ;
-; LPM_WIDTHR                                     ; 256          ; Untyped             ;
-; LPM_WIDTHS                                     ; 1            ; Untyped             ;
-; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
-; LPM_PIPELINE                                   ; 0            ; Untyped             ;
-; LATENCY                                        ; 0            ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
-; USE_EAB                                        ; OFF          ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
-; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_ogu     ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
-+------------------------------------------------+--------------+---------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance         ;
-+---------------------------------------+----------------+
-; Name                                  ; Value          ;
-+---------------------------------------+----------------+
-; Number of entity instances            ; 1              ;
-; Entity Instance                       ; lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 128            ;
-;     -- LPM_WIDTHB                     ; 128            ;
-;     -- LPM_WIDTHP                     ; 256            ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
-;     -- INPUT_A_IS_CONSTANT            ; NO             ;
-;     -- INPUT_B_IS_CONSTANT            ; NO             ;
-;     -- USE_EAB                        ; OFF            ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
-+---------------------------------------+----------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |seq_mult|r_reg[0]         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |seq_mult|n_next[7]        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-----------------------------------------------------+
@@ -318,23 +245,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 516                         ;
-; cycloneiii_ff         ; 512                         ;
-;     CLR               ; 512                         ;
-; cycloneiii_lcell_comb ; 17156                       ;
-;     arith             ; 8505                        ;
-;         1 data inputs ; 62                          ;
-;         2 data inputs ; 63                          ;
-;         3 data inputs ; 8380                        ;
-;     normal            ; 8651                        ;
-;         0 data inputs ; 65                          ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 144                         ;
-;         3 data inputs ; 141                         ;
-;         4 data inputs ; 8300                        ;
+; boundary_port         ; 36                          ;
+; cycloneiii_ff         ; 33                          ;
+;     CLR               ; 9                           ;
+;     ENA CLR           ; 8                           ;
+;     ENA CLR SCLR      ; 16                          ;
+; cycloneiii_lcell_comb ; 52                          ;
+;     arith             ; 22                          ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 8                           ;
+;     normal            ; 30                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 63.00                       ;
-; Average LUT depth     ; 48.43                       ;
+; Max LUT depth         ; 4.70                        ;
+; Average LUT depth     ; 3.05                        ;
 +-----------------------+-----------------------------+
 
 
@@ -343,7 +270,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:16     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -352,64 +279,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
-    Info: Processing started: Thu Feb 20 17:19:19 2025
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Feb 25 17:33:51 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off seq_mult -c seq_mult
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 10 design units, including 1 entities, in source file seq_mult.vhd
-    Info (12022): Found design unit 1: seq_mult-mult_seg_arch File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 18
-    Info (12022): Found design unit 2: seq_mult-four_seg_arch File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 118
-    Info (12022): Found design unit 3: seq_mult-two_seg_arch File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 205
-    Info (12022): Found design unit 4: seq_mult-one_seg_arch File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 276
-    Info (12022): Found design unit 5: seq_mult-sharing_arch File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 328
-    Info (12022): Found design unit 6: seq_mult-mealy_arch File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 416
-    Info (12022): Found design unit 7: seq_mult-shift_add_raw_arch File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 479
-    Info (12022): Found design unit 8: seq_mult-shift_add_better_arch File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 557
-    Info (12022): Found design unit 9: conf File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 632
-    Info (12023): Found entity 1: seq_mult File: /home/aluno/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 8
+    Info (12022): Found design unit 1: seq_mult-mult_seg_arch File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 18
+    Info (12022): Found design unit 2: seq_mult-four_seg_arch File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 118
+    Info (12022): Found design unit 3: seq_mult-two_seg_arch File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 205
+    Info (12022): Found design unit 4: seq_mult-one_seg_arch File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 276
+    Info (12022): Found design unit 5: seq_mult-sharing_arch File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 328
+    Info (12022): Found design unit 6: seq_mult-mealy_arch File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 416
+    Info (12022): Found design unit 7: seq_mult-shift_add_raw_arch File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 479
+    Info (12022): Found design unit 8: seq_mult-shift_add_better_arch File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 557
+    Info (12022): Found design unit 9: conf File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 632
+    Info (12023): Found entity 1: seq_mult File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file multiplicador.vhd
-    Info (12022): Found design unit 1: multiplicador-ifsc File: /home/aluno/ELD_IFSC_2/Encontro33/multiplicador.vhd Line: 17
-    Info (12023): Found entity 1: multiplicador File: /home/aluno/ELD_IFSC_2/Encontro33/multiplicador.vhd Line: 5
-Info (12127): Elaborating entity "multiplicador" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at multiplicador.vhd(12): used implicit default value for signal "ready" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/aluno/ELD_IFSC_2/Encontro33/multiplicador.vhd Line: 12
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: /home/aluno/ELD_IFSC_2/Encontro33/multiplicador.vhd Line: 38
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: /home/aluno/ELD_IFSC_2/Encontro33/multiplicador.vhd Line: 38
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: /home/aluno/ELD_IFSC_2/Encontro33/multiplicador.vhd Line: 38
-    Info (12134): Parameter "LPM_WIDTHA" = "128"
-    Info (12134): Parameter "LPM_WIDTHB" = "128"
-    Info (12134): Parameter "LPM_WIDTHP" = "256"
-    Info (12134): Parameter "LPM_WIDTHR" = "256"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_ogu.tdf
-    Info (12023): Found entity 1: mult_ogu File: /home/aluno/ELD_IFSC_2/Encontro33/db/mult_ogu.tdf Line: 29
-Info (13014): Ignored 25272 buffer(s)
-    Info (13016): Ignored 128 CARRY_SUM buffer(s)
-    Info (13019): Ignored 25144 SOFT buffer(s)
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "ready" is stuck at GND File: /home/aluno/ELD_IFSC_2/Encontro33/multiplicador.vhd Line: 12
+    Info (12022): Found design unit 1: multiplicador-ifsc File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/multiplicador.vhd Line: 17
+    Info (12023): Found entity 1: multiplicador File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/multiplicador.vhd Line: 5
+Info (12127): Elaborating entity "seq_mult" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
-Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "lpm_mult:Mult0|mult_ogu:auto_generated|le3a[129]" File: /home/aluno/ELD_IFSC_2/Encontro33/db/mult_ogu.tdf Line: 133
-    Info (17048): Logic cell "lpm_mult:Mult0|mult_ogu:auto_generated|le66a[129]" File: /home/aluno/ELD_IFSC_2/Encontro33/db/mult_ogu.tdf Line: 162
-    Info (17048): Logic cell "lpm_mult:Mult0|mult_ogu:auto_generated|le67a[128]" File: /home/aluno/ELD_IFSC_2/Encontro33/db/mult_ogu.tdf Line: 163
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "start" File: /home/aluno/ELD_IFSC_2/Encontro33/multiplicador.vhd Line: 10
-Info (21057): Implemented 17927 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 259 input pins
-    Info (21059): Implemented 257 output pins
-    Info (21061): Implemented 17411 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 640 megabytes
-    Info: Processing ended: Thu Feb 20 17:19:42 2025
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:29
+Info (21057): Implemented 103 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 67 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4772 megabytes
+    Info: Processing ended: Tue Feb 25 17:34:02 2025
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:24
 
 

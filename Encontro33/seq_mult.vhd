@@ -4,7 +4,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
---fazer a*b  vetor p unsigned e a saida p std_logic
+
 entity seq_mult is
    port(
       clk, reset: in std_logic;
@@ -200,7 +200,7 @@ end four_seg_arch;
 
 
 --=============================
--- Listing 11.3
+-- Listing 11.3                    --------------------------------------
 --=============================
 architecture two_seg_arch of seq_mult is
    constant WIDTH: integer:=8;
@@ -630,12 +630,12 @@ begin
 end shift_add_better_arch;
 
 configuration conf of seq_mult is
-    for mult_seg_arch end for;
+--    for mult_seg_arch end for;
 --    for four_seg_arch end for;
 --    for two_seg_arch end for;
 --    for one_seg_arch end for;
 --    for sharing_arch end for;
---    for mealy_arch end for;
+    for mealy_arch end for;
 --    for shift_add_raw_arch end for;
 --    for shift_add_better_arch end for;
 end configuration;

@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 --fazer a*b  vetor p unsigned e a saida p std_logic
 entity multiplicador is
-	generic(W : natural :=128);
+	generic(W : natural :=8);
 
    port( 
       clk, reset: in std_logic;
