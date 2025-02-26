@@ -629,13 +629,14 @@ begin
    r <= std_logic_vector(p_reg(2*WIDTH-1 downto 0));
 end shift_add_better_arch;
 
-configuration conf of seq_mult is
---    for mult_seg_arch end for;
---    for four_seg_arch end for;
---    for two_seg_arch end for;
---    for one_seg_arch end for;
---    for sharing_arch end for;
-    for mealy_arch end for;
---    for shift_add_raw_arch end for;
---    for shift_add_better_arch end for;
+configuration ifsc of seq_mult is
+--	for mult_seg_arch  			-- Listing 11.1
+--	for four_seg_arch  			-- Listing 11.2
+	for two_seg_arch 				-- Listing 11.3
+--	for one_seg_arch  			-- Listing 11.4
+--	for sharing_arch 				-- Listing 11.5
+--	for mealy_arch  				-- Listing 11.6
+-- for shift_add_raw_arch  	-- Listing 11.7
+-- for shift_add_better_arch 	-- Listing 11.8
+	end for;
 end configuration;

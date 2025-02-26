@@ -1,5 +1,5 @@
 Analysis & Synthesis report for seq_mult
-Tue Feb 25 17:34:02 2025
+Wed Feb 26 18:50:55 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,11 +13,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  8. State Machine - |seq_mult|state_reg
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -44,15 +45,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb 25 17:34:02 2025       ;
+; Analysis & Synthesis Status        ; Successful - Wed Feb 26 18:50:55 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; seq_mult                                    ;
 ; Top-level Entity Name              ; seq_mult                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 59                                          ;
-;     Total combinational functions  ; 51                                          ;
-;     Dedicated logic registers      ; 33                                          ;
-; Total registers                    ; 33                                          ;
+; Total logic elements               ; 80                                          ;
+;     Total combinational functions  ; 72                                          ;
+;     Dedicated logic registers      ; 36                                          ;
+; Total registers                    ; 36                                          ;
 ; Total pins                         ; 36                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -178,30 +179,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 59        ;
+; Estimated Total logic elements              ; 80        ;
 ;                                             ;           ;
-; Total combinational functions               ; 51        ;
+; Total combinational functions               ; 72        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 16        ;
-;     -- 3 input functions                    ; 16        ;
-;     -- <=2 input functions                  ; 19        ;
+;     -- 4 input functions                    ; 35        ;
+;     -- 3 input functions                    ; 20        ;
+;     -- <=2 input functions                  ; 17        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 29        ;
+;     -- normal mode                          ; 50        ;
 ;     -- arithmetic mode                      ; 22        ;
 ;                                             ;           ;
-; Total registers                             ; 33        ;
-;     -- Dedicated logic registers            ; 33        ;
+; Total registers                             ; 36        ;
+;     -- Dedicated logic registers            ; 36        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 36        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
-; Maximum fan-out node                        ; state_reg ;
+; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 36        ;
-; Total fan-out                               ; 340       ;
-; Average fan-out                             ; 2.18      ;
+; Total fan-out                               ; 401       ;
+; Average fan-out                             ; 2.23      ;
 +---------------------------------------------+-----------+
 
 
@@ -210,9 +211,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |seq_mult                  ; 51 (51)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |seq_mult           ; seq_mult    ; work         ;
+; |seq_mult                  ; 72 (72)             ; 36 (36)                   ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |seq_mult           ; seq_mult    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |seq_mult|state_reg                                             ;
++----------------+--------------+----------------+---------------+----------------+
+; Name           ; state_reg.op ; state_reg.load ; state_reg.ab0 ; state_reg.idle ;
++----------------+--------------+----------------+---------------+----------------+
+; state_reg.idle ; 0            ; 0              ; 0             ; 0              ;
+; state_reg.ab0  ; 0            ; 0              ; 1             ; 1              ;
+; state_reg.load ; 0            ; 1              ; 0             ; 1              ;
+; state_reg.op   ; 1            ; 0              ; 0             ; 1              ;
++----------------+--------------+----------------+---------------+----------------+
 
 
 +------------------------------------------------------+
@@ -220,12 +234,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 33    ;
-; Number of registers using Synchronous Clear  ; 16    ;
+; Total registers                              ; 36    ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 33    ;
+; Number of registers using Asynchronous Clear ; 36    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 24    ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -235,8 +249,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |seq_mult|r_reg[0]         ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |seq_mult|n_next[7]        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |seq_mult|state_next.ab0   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |seq_mult|Selector2        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -246,22 +260,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 36                          ;
-; cycloneiii_ff         ; 33                          ;
-;     CLR               ; 9                           ;
+; cycloneiii_ff         ; 36                          ;
+;     CLR               ; 28                          ;
 ;     ENA CLR           ; 8                           ;
-;     ENA CLR SCLR      ; 16                          ;
-; cycloneiii_lcell_comb ; 52                          ;
+; cycloneiii_lcell_comb ; 73                          ;
 ;     arith             ; 22                          ;
 ;         2 data inputs ; 14                          ;
 ;         3 data inputs ; 8                           ;
-;     normal            ; 30                          ;
+;     normal            ; 51                          ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 16                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 35                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.70                        ;
-; Average LUT depth     ; 3.05                        ;
+; Max LUT depth         ; 4.40                        ;
+; Average LUT depth     ; 3.18                        ;
 +-----------------------+-----------------------------+
 
 
@@ -280,7 +293,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Feb 25 17:33:51 2025
+    Info: Processing started: Wed Feb 26 18:50:42 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off seq_mult -c seq_mult
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -293,7 +306,7 @@ Info (12021): Found 10 design units, including 1 entities, in source file seq_mu
     Info (12022): Found design unit 6: seq_mult-mealy_arch File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 416
     Info (12022): Found design unit 7: seq_mult-shift_add_raw_arch File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 479
     Info (12022): Found design unit 8: seq_mult-shift_add_better_arch File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 557
-    Info (12022): Found design unit 9: conf File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 632
+    Info (12022): Found design unit 9: ifsc File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 632
     Info (12023): Found entity 1: seq_mult File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/seq_mult.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file multiplicador.vhd
     Info (12022): Found design unit 1: multiplicador-ifsc File: C:/Users/thays/Desktop/repo/ELD_IFSC_2/Encontro33/multiplicador.vhd Line: 17
@@ -302,14 +315,14 @@ Info (12127): Elaborating entity "seq_mult" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 103 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 121 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 67 logic cells
+    Info (21061): Implemented 85 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4772 megabytes
-    Info: Processing ended: Tue Feb 25 17:34:02 2025
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Peak virtual memory: 4771 megabytes
+    Info: Processing ended: Wed Feb 26 18:50:55 2025
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:26
 
 

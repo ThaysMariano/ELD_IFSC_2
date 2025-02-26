@@ -1,0 +1,56 @@
+
+ vlib rtl_work
+ vmap work rtl_work
+
+ vmap work rtl_work 
+
+ vcom -93 -work work {../../seq_mult.vhd}
+
+#vsim work.seq_mult(mult_seg_arch)
+vsim work.seq_mult(four_seg_arch)
+#vsim work.seq_mult(two_seg_arch)
+#vsim work.seq_mult(one_seg_arch)
+#vsim work.seq_mult(sharing_arch)
+#vsim work.seq_mult(mealy_arch)
+#vsim work.seq_mult(shift_add_raw_arch)
+#vsim work.seq_mult(shift_add_better_arch)
+
+add wave -noupdate -radix unsigned -position end  sim:/seq_mult/clk
+add wave -noupdate -radix unsigned -position end  sim:/seq_mult/reset
+add wave -noupdate -radix unsigned -position end  sim:/seq_mult/start
+add wave -noupdate -radix unsigned -position end  sim:/seq_mult/a_in
+add wave -noupdate -radix unsigned -position end  sim:/seq_mult/b_in
+add wave -noupdate -radix unsigned -position end  sim:/seq_mult/r
+add wave -noupdate -radix unsigned -position end  sim:/seq_mult/ready
+force -freeze sim:/seq_mult/clk 1 0, 0 {50 ps} -r 100
+
+#31*2
+force -freeze sim:/seq_mult/reset 1 0 , 0 100
+force -freeze sim:/seq_mult/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/seq_mult/a_in 10#2 0
+force -freeze sim:/seq_mult/b_in 10#31 0
+force -freeze sim:/seq_mult/start 0 0
+force -freeze sim:/seq_mult/start 1 0, 0 100
+run 7000
+
+#2*31
+force -freeze sim:/seq_mult/a_in 10#31 0
+force -freeze sim:/seq_mult/b_in 10#2 0
+force -freeze sim:/seq_mult/start 1 0, 0 100
+run 10000
+
+#10*14
+
+force -freeze sim:/seq_mult/a_in 10#10 0
+force -freeze sim:/seq_mult/b_in 10#14 0
+force -freeze sim:/seq_mult/start 1 0, 0 100
+run 7000
+
+#14*10
+force -freeze sim:/seq_mult/a_in 10#14 0
+force -freeze sim:/seq_mult/b_in 10#10 0
+force -freeze sim:/seq_mult/start 1 0, 0 100
+run 10000
+
+
+

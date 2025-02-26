@@ -1,8 +1,7 @@
 
 State Machine - |seq_mult|state_reg
-Name state_reg.op2 state_reg.op1 state_reg.load state_reg.ab0 state_reg.idle 
-state_reg.idle 0 0 0 0 0 
-state_reg.ab0 0 0 0 1 1 
-state_reg.load 0 0 1 0 1 
-state_reg.op1 0 1 0 0 1 
-state_reg.op2 1 0 0 0 1 
+Name state_reg.op state_reg.load state_reg.ab0 state_reg.idle 
+state_reg.idle 0 0 0 0 
+state_reg.ab0 0 0 1 1 
+state_reg.load 0 1 0 1 
+state_reg.op 1 0 0 1 
