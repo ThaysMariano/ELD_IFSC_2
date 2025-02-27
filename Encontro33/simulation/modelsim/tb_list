@@ -7,8 +7,8 @@
  vcom -93 -work work {../../seq_mult.vhd}
 
 #vsim work.seq_mult(mult_seg_arch)
-vsim work.seq_mult(four_seg_arch)
-#vsim work.seq_mult(two_seg_arch)
+#vsim work.seq_mult(four_seg_arch)
+vsim work.seq_mult(two_seg_arch)
 #vsim work.seq_mult(one_seg_arch)
 #vsim work.seq_mult(sharing_arch)
 #vsim work.seq_mult(mealy_arch)

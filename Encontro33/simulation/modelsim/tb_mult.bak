@@ -1,0 +1,44 @@
+
+ vlib rtl_work
+ vmap work rtl_work
+
+ vcom -93 -work work {/home/aluno/ELD_IFSC_2/Encontro33/multiplicador.vhd}
+ vsim work.multiplicador
+
+add wave -noupdate -radix unsigned -position end  sim:/multiplicador/W
+add wave -noupdate -radix unsigned -position end  sim:/multiplicador/clk
+add wave -noupdate -radix unsigned -position end  sim:/multiplicador/reset
+add wave -noupdate -radix unsigned -position end  sim:/multiplicador/start
+add wave -noupdate -radix unsigned -position end  sim:/multiplicador/a_in
+add wave -noupdate -radix unsigned -position end  sim:/multiplicador/b_in
+add wave -noupdate -radix unsigned -position end  sim:/multiplicador/ready
+add wave -position end  sim:/multiplicador/r
+force -freeze sim:/multiplicador/clk 1 0, 0 {50 ps} -r 100
+
+#31*2
+force -freeze sim:/multiplicador/reset 1 0 , 0 100
+force -freeze sim:/multiplicador/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/multiplicador/a_in 10#2 0
+force -freeze sim:/multiplicador/b_in 10#31 0
+force -freeze sim:/multiplicador/start 0 0
+force -freeze sim:/multiplicador/start 1 0, 0 100
+run 7000
+
+#2*31
+force -freeze sim:/multiplicador/a_in 10#31 0
+force -freeze sim:/multiplicador/b_in 10#2 0
+force -freeze sim:/multiplicador/start 1 0, 0 100
+run 10000
+
+#10*14
+
+force -freeze sim:/multiplicador/a_in 10#10 0
+force -freeze sim:/multiplicador/b_in 10#14 0
+force -freeze sim:/multiplicador/start 1 0, 0 100
+run 7000
+
+#14*10
+force -freeze sim:/multiplicador/a_in 10#14 0
+force -freeze sim:/multiplicador/b_in 10#10 0
+force -freeze sim:/multiplicador/start 1 0, 0 100
+run 10000
